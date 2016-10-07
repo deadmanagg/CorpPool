@@ -16,6 +16,8 @@ import org.glassfish.jersey.server.ServerProperties;
 import org.glassfish.jersey.server.TracingConfig;
 import org.glassfish.jersey.server.mvc.jsp.JspMvcFeature;
 
+import com.corppool.mobile.service.FeedsService;
+
 /**
  * For servlet 3.0, this class is required to boot rest APIs
  * This now extends ResourceConfig to load additional classes
@@ -29,7 +31,7 @@ public class RestApplication extends ResourceConfig {
 	
 	public RestApplication() {
         // Resources.
-        packages("com.carpool.mobile.service");
+        packages(FeedsService.class.getPackage().getName());
 		// MVC.
         register(JspMvcFeature.class);
 

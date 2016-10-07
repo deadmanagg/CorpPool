@@ -1,6 +1,7 @@
 package com.corppool.mobile.service;
 
-import javax.ws.rs.Consumes;
+import java.net.URLDecoder;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -12,6 +13,7 @@ import javax.ws.rs.core.Response;
 import com.corppool.mongodb.dao.MongoDBConnection;
 import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;
+import com.mongodb.DBObject;
 import com.mongodb.util.JSON;
 
 @Path("/feeds")
@@ -19,9 +21,7 @@ public class FeedsService {
 
 	
 	@POST
-	@Consumes({ MediaType.APPLICATION_JSON })
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/cde")
 	public Response addFeed(String feed){
 		String result = "";
 		try {
@@ -41,14 +41,16 @@ public class FeedsService {
 	
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
-	@Path("/abc/{query}")
-	public String getAccessRecordsForKey(@PathParam("query") String query) {
+	@Path("/{query}")
+	public String getNearestFeeds(@PathParam("query") String query) {
 		String resultJson = "";
 		try {
 			
-			BasicDBList feeds = MongoDBConnection.read("Feeds",(BasicDBObject) JSON.parse(query));
+			DBObject o = (DBObject) JSON.parse(query);
+			BasicDBObject b = (BasicDBObject)o;
+			BasicDBList feeds = MongoDBConnection.read("Feeds",b);
 			
-			resultJson = feeds.toArray().toString();
+			resultJson = feeds.toString();
 		}
 		catch (Exception e) {
 			// log to the logger
