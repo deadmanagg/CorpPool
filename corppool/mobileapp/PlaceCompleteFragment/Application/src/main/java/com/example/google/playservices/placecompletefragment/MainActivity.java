@@ -28,6 +28,7 @@ import com.example.android.common.activities.SampleActivityBase;
 import com.example.android.common.logger.Log;
 import com.google.android.gms.maps.model.LatLng;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -59,6 +60,10 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
     private Button postButton;
 
     private String intent;
+
+    private Place startLoc;
+    private Place endLoc;
+    private Button findButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +117,9 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
         postButton = (Button)findViewById(R.id.post_button);
 
         postButton.setOnClickListener(this);
+        findButton = (Button)findViewById(R.id.find_button);
+
+        findButton.setOnClickListener(this);
     }
 
     /**
@@ -145,6 +153,8 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
         loc.set_long(place.getLatLng().longitude);
 
         feed.setStartLoc(loc);
+
+        startLoc = place;
     }
 
     private void setEndLocation(Place place){
@@ -158,7 +168,7 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
         loc.set_long(place.getLatLng().longitude);
 
         feed.setEndLoc(loc);
-
+        endLoc = place;
     }
 
 
@@ -199,10 +209,29 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
             case R.id.find_button:
                 // do your code
                 intent = "FIND";
+                //invoke the other activity
+                showFeeds();
                 break;
             default:
                 break;
         }
+    }
+
+    private void showFeeds(){
+
+       Intent intent = new Intent(MainActivity.this, Feeds_main.class);
+        //TODO, develop a way to pass POJO, instead of each value by itself
+        intent.putExtra("name","DeepanshMobile");
+        intent.putExtra("userid","FirstAndroidApp");
+        intent.putExtra("date",datePicker.getDayOfMonth()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getYear());
+        intent.putExtra("time",timePicker.getHour()+":"+timePicker.getMinute());
+
+        //Once Pojo serialisze is available, pass whole place object
+        intent.putExtra("reqStartLoc",startLoc.getName());
+        intent.putExtra("reqEndLoc",endLoc.getName());
+
+        startActivity(intent);
+        finish();
     }
 
     private class PostFeed extends AsyncTask<String, Void, Void> {

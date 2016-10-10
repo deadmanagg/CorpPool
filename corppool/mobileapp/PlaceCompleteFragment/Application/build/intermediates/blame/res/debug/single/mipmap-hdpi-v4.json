@@ -2,5 +2,9 @@
     {
         "merged": "E:\\CODES\\SamplesAndroid\\android-play-places-master\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "E:\\CODES\\SamplesAndroid\\android-play-places-master\\PlaceCompleteFragment\\Application\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

@@ -26,5 +26,12 @@
     </string>
     <string name="driver">Give A Ride</string>
     <string name="rider">Find A Ride</string>
+    <string name="lbl_startloc">From - </string>
+    <string name="lbl_endloc">To - </string>
+
+    <string name="showdetails">Details </string>
+    <string name="sendText">Text or Call </string>
+
+
 
 </resources>

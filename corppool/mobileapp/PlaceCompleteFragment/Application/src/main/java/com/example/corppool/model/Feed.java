@@ -19,6 +19,26 @@ public class Feed {
     private Location startLoc;
     private Location endLoc;
 
+    private String startAddress;
+    private String endAddress;
+
+    private String nMilesAway;
+    private String xMinutesAway;
+
+    //below constructor will be used to display feed.
+    //this constructor is not useful to send info to server
+    public Feed(String name, String userid, String startAddress, String endAddress, String nMilesAway,String xMinutesAway){
+
+        this.name = name;
+        this.userid = userid;
+        this.startAddress = startAddress;
+        this.endAddress = endAddress;
+        this.nMilesAway = nMilesAway;
+        this.xMinutesAway = xMinutesAway;
+    }
+
+    public Feed(){}
+
     public String get_id() {
         return _id;
     }
@@ -115,6 +135,38 @@ public class Feed {
 
         return  o;
 
+    }
+
+    public String getStartAddress() {
+        return startAddress;
+    }
+
+    public void setStartAddress(String startAddress) {
+        this.startAddress = startAddress;
+    }
+
+    public String getEndAddress() {
+        return endAddress;
+    }
+
+    public void setEndAddress(String endAddress) {
+        this.endAddress = endAddress;
+    }
+
+    public String getnMilesAway() {
+        return nMilesAway;
+    }
+
+    public void setnMilesAway(String nMilesAway) {
+        this.nMilesAway = nMilesAway;
+    }
+
+    public String getxMinutesAway() {
+        return xMinutesAway;
+    }
+
+    public void setxMinutesAway(String xMinutesAway) {
+        this.xMinutesAway = xMinutesAway;
     }
 
 }
