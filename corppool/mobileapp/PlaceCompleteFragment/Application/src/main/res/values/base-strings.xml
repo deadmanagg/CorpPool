@@ -31,7 +31,7 @@
 
     <string name="showdetails">Details </string>
     <string name="sendText">Text or Call </string>
-
+    <string name="defaultDay">Today</string>
 
 
 </resources>

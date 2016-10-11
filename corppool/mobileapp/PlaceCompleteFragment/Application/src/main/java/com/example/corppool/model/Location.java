@@ -14,6 +14,14 @@ public class Location {
     private double _lat;
     private double _long;
 
+    public  Location(){}
+    public Location(String type, double _lat, double _long){
+
+        this.type = type;
+        this._lat = _lat;
+        this._long = _long;
+    }
+
     public String getType() {
         return type;
     }

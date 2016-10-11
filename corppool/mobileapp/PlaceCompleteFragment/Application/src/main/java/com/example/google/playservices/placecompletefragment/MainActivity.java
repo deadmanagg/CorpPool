@@ -28,6 +28,11 @@ import com.example.android.common.activities.SampleActivityBase;
 import com.example.android.common.logger.Log;
 import com.google.android.gms.maps.model.LatLng;
 
+import android.app.Application;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
@@ -36,15 +41,18 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 import org.json.JSONObject;
 
+import java.util.Calendar;
 import java.util.EventListener;
 
 public class MainActivity extends SampleActivityBase implements PlaceSelectionListener,View.OnClickListener {
@@ -65,6 +73,8 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
     private Place endLoc;
     private Button findButton;
 
+    private TextView startDate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +84,7 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
         // Retrieve the PlaceAutocompleteFragment.
         PlaceAutocompleteFragment startLoc = (PlaceAutocompleteFragment)
                 getFragmentManager().findFragmentById(R.id.startLoc);
+
 
         // Register a listener to receive callbacks when a place has been selected or an error has
         // occurred.
@@ -110,10 +121,45 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
 
 
         // Retrieve the TextViews that will display details about the selected place.
-        mPlaceDetailsText = (TextView) findViewById(R.id.place_details);
+      //  mPlaceDetailsText = (TextView) findViewById(R.id.place_details);
        // mPlaceAttribution = (TextView) findViewById(R.id.place_attribution);
-        datePicker = (DatePicker)findViewById(R.id.datePicker1);
+      //  datePicker = (DatePicker)findViewById(R.id.datePicker1);
         timePicker = (TimePicker)findViewById(R.id.timePicker1);
+        startDate = (TextView)findViewById(R.id.startDate);
+
+        //set listener to show dialog for date
+        startDate.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                //To show current date in the datepicker
+                Calendar mcurrentDate = Calendar.getInstance();
+                int mYear = mcurrentDate.get(Calendar.YEAR);
+                int mMonth = mcurrentDate.get(Calendar.MONTH);
+                int mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
+
+                //TODO move date picker object to factory package to avoid setting same config at multiple places
+                DatePickerDialog mDatePicker;
+                mDatePicker = new DatePickerDialog(MainActivity.this,android.R.style.Theme_Holo_Dialog, new DatePickerDialog.OnDateSetListener() {
+
+                    public void onDateSet(DatePicker datepicker, int selectedyear, int selectedmonth, int selectedday) {
+                        // TODO Auto-generated method stub
+                        // *      Your code   to get date and time    *//*
+                        selectedmonth = selectedmonth + 1;
+                        startDate.setText("" + selectedday + "/" + selectedmonth + "/" + selectedyear);
+                    }
+                    }
+
+                    ,mYear, mMonth, mDay);
+                mDatePicker.setTitle("Select Date");
+                    mDatePicker.getDatePicker().setSpinnersShown(true);
+                mDatePicker.getDatePicker().setCalendarViewShown(false);
+                mDatePicker.show();
+
+
+            }
+        });
         postButton = (Button)findViewById(R.id.post_button);
 
         postButton.setOnClickListener(this);
@@ -223,12 +269,18 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
         //TODO, develop a way to pass POJO, instead of each value by itself
         intent.putExtra("name","DeepanshMobile");
         intent.putExtra("userid","FirstAndroidApp");
-        intent.putExtra("date",datePicker.getDayOfMonth()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getYear());
+        //intent.putExtra("date",datePicker.getDayOfMonth()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getYear());
+        intent.putExtra("date",startDate.getText().toString());
         intent.putExtra("time",timePicker.getHour()+":"+timePicker.getMinute());
 
         //Once Pojo serialisze is available, pass whole place object
         intent.putExtra("reqStartLoc",startLoc.getName());
         intent.putExtra("reqEndLoc",endLoc.getName());
+        intent.putExtra("reqStartLat",startLoc.getLatLng().latitude);
+        intent.putExtra("reqStartLong",startLoc.getLatLng().longitude);
+        intent.putExtra("reqEndLat",endLoc.getLatLng().latitude);
+        intent.putExtra("reqEndLong",endLoc.getLatLng().longitude);
+
 
         startActivity(intent);
         finish();
@@ -245,8 +297,12 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
 
                 feed.setName("DeepanshMobile");
                 feed.setUserid("FirstAndroidApp");
-                feed.setDate(datePicker.getDayOfMonth()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getYear());
+                //feed.setDate(datePicker.getDayOfMonth()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getYear());
+                feed.setDate(startDate.getText().toString());
                 feed.setTime(timePicker.getHour()+":"+timePicker.getMinute());
+
+                feed.setStartAddress(startLoc.getAddress().toString());
+                feed.setEndAddress(endLoc.getAddress().toString());
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -272,5 +328,6 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
         }
 
     }
-
 }
+
+

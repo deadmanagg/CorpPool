@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.corppool.model.Feed;
+import com.example.corppool.util.CommonUtils;
 import com.example.google.playservices.placecompletefragment.R;
 
 import java.util.List;
@@ -18,12 +19,15 @@ import java.util.List;
  */
 public class FeedListAdapter extends ArrayAdapter<String> {
     private final Context context;
-    private final Feed[]  values;
+    private final List<Feed>  values;
 
-    public FeedListAdapter(Context context, Feed[] values) {
+    private Feed reqStartFeed;
+
+    public FeedListAdapter(Context context, List<Feed> values,Feed reqStartFeed) {
         super(context, R.layout.fragment_feed);
         this.context = context;
         this.values = values;
+        this.reqStartFeed = reqStartFeed;
     }
 
     @Override
@@ -39,7 +43,7 @@ public class FeedListAdapter extends ArrayAdapter<String> {
         //endLoc.setText(Double.valueOf(values[position].getEndLoc().get_lat()).toString());
 
         // Change icon based on name
-        Feed s = values[position];
+        Feed s = values.get(position);
 
         TextView milesAway = (TextView) rowView.findViewById(R.id.milesAway);;
         TextView startAddress = (TextView) rowView.findViewById(R.id.startAddress);;
@@ -47,10 +51,13 @@ public class FeedListAdapter extends ArrayAdapter<String> {
         TextView minutesAway= (TextView) rowView.findViewById(R.id.minutesAway);
 
         //Now set values
-        milesAway.setText(s.getnMilesAway()+" Miles Away");
+        //calculate miles and then minutes, based on 30 mph
+        double distance = CommonUtils.getDistance(s.getStartLoc().get_lat(),s.getStartLoc().get_long(),reqStartFeed.getStartLoc().get_lat(),reqStartFeed.getStartLoc().get_long());
+
+        milesAway.setText(distance+" Miles Away");
         startAddress.setText(s.getStartAddress());
         endAddress.setText(s.getEndAddress());
-        minutesAway.setText("Starting in "+s.getxMinutesAway()+" min ");
+        minutesAway.setText("Starting in "+distance*2+" min ");   //based on 30 mph
 
         System.out.println(s);
 
@@ -59,6 +66,6 @@ public class FeedListAdapter extends ArrayAdapter<String> {
 
     @Override
     public int getCount() {
-        return values.length;
+        return values.size();
     }
 }

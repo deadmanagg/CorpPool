@@ -325,6 +325,7 @@
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="decline">Decline</string>
+    <string name="defaultDay">Today</string>
     <string name="driver">Give A Ride</string>
     <string name="intro_message">
         

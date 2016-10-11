@@ -1,5 +1,8 @@
 package com.example.corppool.model;
 
+import com.example.corppool.util.CommonUtils;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -132,6 +135,8 @@ public class Feed {
         o.put("time", time);
         o.put("startLoc", startLocO);
         o.put("endLoc",endLocO);
+        o.put("startAddress",startAddress);
+        o.put("endAddress",endAddress);
 
         return  o;
 
@@ -167,6 +172,41 @@ public class Feed {
 
     public void setxMinutesAway(String xMinutesAway) {
         this.xMinutesAway = xMinutesAway;
+    }
+
+    //TODO move this to util, using Locker Project utlity funciton to convert JSOn to class object
+    public static Feed marshalToFeed(JSONObject json) throws  JSONException{
+        Feed feed = new Feed();
+        Location startLoc = new Location();
+
+        JSONObject startLocResp = json.getJSONObject("startLoc");
+        JSONArray cor = startLocResp.getJSONArray("coordinates");
+         startLoc.set_lat(cor.getDouble(1));
+        startLoc.set_long(cor.getDouble(0));
+
+        feed.setStartAddress(CommonUtils.getJsonValue(json, "startAddress"));
+        feed.setEndAddress(CommonUtils.getJsonValue(json, "endAddress"));
+
+        feed.setStartLoc(startLoc);
+        return feed;
+    }
+
+    //TODO, temporary fix, server should handle inclusion/exclusion params
+    public JSONObject getAsJsonForSearch() throws  JSONException{
+        JSONObject startLocO = new JSONObject();
+        startLocO.put("type", startLoc.getType());
+        startLocO.put("coordinates", startLoc.getCoordinates());
+
+        JSONObject endLocO = new JSONObject();
+        endLocO.put("type", endLoc.getType());
+        endLocO.put("coordinates", endLoc.getCoordinates());
+
+        JSONObject o = new JSONObject();
+        o.put("startLoc", startLocO);
+        o.put("endLoc",endLocO);
+
+        return  o;
+
     }
 
 }
