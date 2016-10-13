@@ -34,6 +34,14 @@ public class CommonUtils {
         distance = locationA.distanceTo(locationB);
 
         //convert for KMs
-        return  Math.round(distance * 1.609344*100.0)/100.0;
+        //return  Math.round(distance * 1.609344*100.0)/100.0;
+        //return (double)Math.round(distance*1000d)/1000d;  //in meters
+        return distance;
     }
+
+    public static double getDistanceInKm(double startLatitude, double startLongitude, double endLatitude, double endLongitude) {
+        return Math.round((getDistance(startLatitude,startLongitude,endLatitude,endLongitude)/1000)*10)/10.0;
+    }
+
+
 }

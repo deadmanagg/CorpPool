@@ -91,8 +91,8 @@ public class ServerInterface  {
 
         try {
 
-            urlToGetFeeds+=reqFeed.getAsJsonForSearch();
-            URL url = new URL(urlToGetFeeds);
+            String urlToGet =urlToGetFeeds+ reqFeed.getAsJsonForSearch();
+            URL url = new URL(urlToGet);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
             con.setRequestMethod("GET");

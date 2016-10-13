@@ -336,6 +336,8 @@
     </string>
     <string name="lbl_endloc">To - </string>
     <string name="lbl_startloc">From - </string>
+    <string name="milesAwayText">KM Away</string>
+    <string name="minutesAwayTxt">in starting</string>
     <string name="mr_media_route_button_content_description">Cast</string>
     <string name="mr_media_route_chooser_searching">Searching for devices\u2026</string>
     <string name="mr_media_route_chooser_title">Connect to device</string>

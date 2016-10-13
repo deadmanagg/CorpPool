@@ -33,5 +33,9 @@
     <string name="sendText">Text or Call </string>
     <string name="defaultDay">Today</string>
 
+    <string name="milesAwayText">KM Away</string>
+    <string name="minutesAwayTxt">in starting</string>
+
+
 
 </resources>

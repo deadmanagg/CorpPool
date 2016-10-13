@@ -139,6 +139,7 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
                 int mMonth = mcurrentDate.get(Calendar.MONTH);
                 int mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
 
+
                 //TODO move date picker object to factory package to avoid setting same config at multiple places
                 DatePickerDialog mDatePicker;
                 mDatePicker = new DatePickerDialog(MainActivity.this,android.R.style.Theme_Holo_Dialog, new DatePickerDialog.OnDateSetListener() {
@@ -265,7 +266,7 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
 
     private void showFeeds(){
 
-       Intent intent = new Intent(MainActivity.this, Feeds_main.class);
+           Intent intent = new Intent(MainActivity.this, Feeds_main.class);
         //TODO, develop a way to pass POJO, instead of each value by itself
         intent.putExtra("name","DeepanshMobile");
         intent.putExtra("userid","FirstAndroidApp");

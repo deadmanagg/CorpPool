@@ -32,7 +32,7 @@ import java.util.ArrayList;
 
 public class MongoDBConnection {
 
-	//private static final MongoClient mongoClient = new MongoClient();
+	//private static MongoClient mongoClient = new MongoClient();
 	//private static final MongoClientURI  mongoUri = new MongoClientURI("mongodb://interfaceuser:password1@127.9.110.4");
 	//private static final MongoClient mongoClient = new MongoClient(mongoUri);
 	
@@ -70,6 +70,7 @@ public class MongoDBConnection {
 		for(Document doc: itr ){;
 			dbList.add(doc);
 		}
+		
 		
 		return dbList;
 	}

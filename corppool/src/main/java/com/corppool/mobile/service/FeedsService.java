@@ -10,6 +10,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.corppool.controller.FeedSearchController;
 import com.corppool.mongodb.dao.MongoDBConnection;
 import com.google.gson.JsonObject;
 import com.mongodb.BasicDBList;
@@ -49,7 +50,15 @@ public class FeedsService {
 		String resultJson = "";
 		try {
 			
-			DBObject o = (DBObject) JSON.parse(query);
+			//filter request
+			
+			//TODO, use controller to get singleton object
+			FeedSearchController cntrl = new FeedSearchController(query);
+			
+			//remove default criteria
+			String filteredQuery = cntrl.removeDefaultFactors().addNearStartLocDist(10).build().toString();
+			
+			DBObject o = (DBObject) JSON.parse(filteredQuery);
 			BasicDBObject b = (BasicDBObject)o;
 			BasicDBList feeds = MongoDBConnection.read("Feeds",b);
 			

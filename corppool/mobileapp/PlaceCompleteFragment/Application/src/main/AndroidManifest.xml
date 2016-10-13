@@ -36,6 +36,7 @@
 
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTop"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +46,15 @@
         </activity>
         <activity
             android:name=".Feeds_main"
-            android:label="@string/title_activity_feeds_main"></activity>
+            android:label="@string/title_activity_feeds_main"
+            android:parentActivityName="com.example.google.playservices.placecompletefragment.MainActivity"
+            >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+          <!--  <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.google.playservices.placecompletefragment.MainActivity" />-->
+        </activity>
     </application>
 
 </manifest>

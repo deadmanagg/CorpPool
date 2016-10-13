@@ -1,6 +1,7 @@
 package com.example.corppool.android.custom.adapter;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.corppool.model.Feed;
 import com.example.corppool.util.CommonUtils;
+import com.example.corppool.util.StringUtils;
 import com.example.google.playservices.placecompletefragment.R;
 
 import java.util.List;
@@ -52,12 +54,12 @@ public class FeedListAdapter extends ArrayAdapter<String> {
 
         //Now set values
         //calculate miles and then minutes, based on 30 mph
-        double distance = CommonUtils.getDistance(s.getStartLoc().get_lat(),s.getStartLoc().get_long(),reqStartFeed.getStartLoc().get_lat(),reqStartFeed.getStartLoc().get_long());
+        double distance = CommonUtils.getDistanceInKm(s.getStartLoc().get_lat(), s.getStartLoc().get_long(), reqStartFeed.getStartLoc().get_lat(), reqStartFeed.getStartLoc().get_long());
 
-        milesAway.setText(distance+" Miles Away");
-        startAddress.setText(s.getStartAddress());
-        endAddress.setText(s.getEndAddress());
-        minutesAway.setText("Starting in "+distance*2+" min ");   //based on 30 mph
+        milesAway.setText(distance+"");
+        startAddress.setText(StringUtils.substring(s.getStartAddress(),0, 30));
+        endAddress.setText(StringUtils.substring(s.getEndAddress(), 0, 30));
+        minutesAway.setText(distance*2+" min ");   //based on 30 mph
 
         System.out.println(s);
 

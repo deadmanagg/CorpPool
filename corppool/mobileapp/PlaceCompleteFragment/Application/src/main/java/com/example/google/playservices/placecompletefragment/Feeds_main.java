@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v4.app.NavUtils;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -23,7 +25,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Feeds_main extends ListActivity {
+public class Feeds_main extends ListActivity  {
 
     private TextView reqStartLoc;
     private TextView reqEndLoc;
@@ -51,6 +53,8 @@ public class Feeds_main extends ListActivity {
 
         //here call Http Get to get all feeds
         loadFeeds();
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void loadData(){
@@ -109,12 +113,19 @@ public class Feeds_main extends ListActivity {
     public  void onPause(){
         super.onPause();
 
+        moveBackToHome();
+
+    }
+
+    private void moveBackToHome(){
         //go back to main activity
         Intent in = new Intent(Feeds_main.this,MainActivity.class);
         startActivity(in);
-        //finish();
-    }
 
+        //NavUtils.navigateUpTo(this, in);
+       // NavUtils.navigateUpFromSameTask(this);
+        finish();
+    }
 
     private class GetFeeds extends AsyncTask<String, String, JSONArray> {
         private ProgressDialog pDialog;
@@ -151,6 +162,18 @@ public class Feeds_main extends ListActivity {
             }
 
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                moveBackToHome();
+
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }
