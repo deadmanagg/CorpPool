@@ -7,11 +7,15 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/margin_medium"
+        android:paddingTop="@dimen/margin_medium"
+        >
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
+            android:paddingRight="@dimen/margin_small"
             android:orientation="vertical">
 
             <TextView
@@ -68,9 +72,9 @@
                 android:id="@+id/minutesAway"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="?android:attr/textAppearanceMedium" />
             <TextView
-                android:id="@string/minutesAwayTxt"
+                android:text="@string/minutesAwayTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 

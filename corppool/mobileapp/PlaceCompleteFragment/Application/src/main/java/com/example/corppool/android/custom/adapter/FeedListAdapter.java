@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.corppool.model.Feed;
+import com.example.corppool.model.TimeDifference;
 import com.example.corppool.util.CommonUtils;
 import com.example.corppool.util.StringUtils;
 import com.example.google.playservices.placecompletefragment.R;
@@ -56,11 +57,21 @@ public class FeedListAdapter extends ArrayAdapter<String> {
         //calculate miles and then minutes, based on 30 mph
         double distance = CommonUtils.getDistanceInKm(s.getStartLoc().get_lat(), s.getStartLoc().get_long(), reqStartFeed.getStartLoc().get_lat(), reqStartFeed.getStartLoc().get_long());
 
-        milesAway.setText(distance+"");
+        milesAway.setText(distance+" km");
         startAddress.setText(StringUtils.substring(s.getStartAddress(),0, 30));
         endAddress.setText(StringUtils.substring(s.getEndAddress(), 0, 30));
-        minutesAway.setText(distance*2+" min ");   //based on 30 mph
 
+        //calculate time
+        String date1 = CommonUtils.convertToInternationalDateFormat(CommonUtils.convertTextDateToDate(reqStartFeed.getDate()))+" "+reqStartFeed.getTime();
+        String date2 = CommonUtils.convertToInternationalDateFormat(s.getDate())+" "+s.getTime();
+
+        TimeDifference timeDiff = null;
+        try {
+             timeDiff = CommonUtils.getTimeDifference(date1, date2);
+        }catch(Exception e){
+            timeDiff = new TimeDifference();
+        }
+        minutesAway.setText(timeDiff.format());
         System.out.println(s);
 
         return rowView;

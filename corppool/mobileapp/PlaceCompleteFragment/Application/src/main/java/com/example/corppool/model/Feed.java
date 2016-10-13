@@ -188,6 +188,8 @@ public class Feed {
         feed.setEndAddress(CommonUtils.getJsonValue(json, "endAddress"));
 
         feed.setStartLoc(startLoc);
+        feed.setDate(CommonUtils.getJsonValue(json, "date"));
+        feed.setTime(CommonUtils.getJsonValue(json,"time"));
         return feed;
     }
 
