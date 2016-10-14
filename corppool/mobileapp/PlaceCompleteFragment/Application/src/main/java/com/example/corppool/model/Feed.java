@@ -207,6 +207,9 @@ public class Feed {
         o.put("startLoc", startLocO);
         o.put("endLoc",endLocO);
 
+        o.put("time",time);
+        o.put("date",date);
+
         return  o;
 
     }

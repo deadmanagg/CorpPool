@@ -73,18 +73,21 @@ public class Feeds_main extends ListActivity  {
         reqStartFeed.setEndLoc(eloc);
 
         sloc.setType("Point");
-        sloc.set_lat(i.getDoubleExtra("reqStartLat",0));
-        sloc.set_long(i.getDoubleExtra("reqStartLong",0));
+        sloc.set_lat(i.getDoubleExtra("reqStartLat", 0));
+        sloc.set_long(i.getDoubleExtra("reqStartLong", 0));
 
         eloc.setType("Point");
-        eloc.set_lat(i.getDoubleExtra("reqEndLat",0));
-        eloc.set_long(i.getDoubleExtra("reqEndLong",0));
+        eloc.set_lat(i.getDoubleExtra("reqEndLat", 0));
+        eloc.set_long(i.getDoubleExtra("reqEndLong", 0));
 
         //populate values from the request
         reqStartLoc.setText(reqStartFeed.getStartAddress());
         reqEndLoc.setText(reqStartFeed.getEndAddress());
 
-        reqStartDate.setText(reqStartFeed.getDate());
+        //reqStartDate.setText(reqStartFeed.getDate());
+        //display date
+        reqStartDate.setText(i.getStringExtra("date_display"));
+
         reqStartTime.setText(reqStartFeed.getTime());
 
     }
@@ -113,7 +116,7 @@ public class Feeds_main extends ListActivity  {
     public  void onPause(){
         super.onPause();
 
-        moveBackToHome();
+    //    moveBackToHome();
 
     }
 
@@ -176,4 +179,8 @@ public class Feeds_main extends ListActivity  {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed(){
+     moveBackToHome();
+    }
 }

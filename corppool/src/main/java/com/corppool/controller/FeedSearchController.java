@@ -17,7 +17,7 @@ public class FeedSearchController extends SearchController<FeedSearchController>
 		super(query);
 	}
 	public FeedSearchController removeStartTimeFactor(){
-		return	super.removeCriteria("Time");
+		return	super.removeCriteria("time");
 	
 	}
 	
@@ -28,9 +28,6 @@ public class FeedSearchController extends SearchController<FeedSearchController>
 	public FeedSearchController removeDefaultFactors(){
 		super.removeCriteria("_id");
 		super.removeCriteria("userid");
-		
-		//time will be removed and has to be added for comparison instead of equality
-		super.removeCriteria("time");
 		
 		//TODO add more basic filters, which will be applicable to most of the feeds
 		return super.removeCriteria("name");
@@ -74,6 +71,23 @@ public class FeedSearchController extends SearchController<FeedSearchController>
 		startLoc.remove("coordinates");
 		
 		
+		return this;
+	}
+	
+	public FeedSearchController addFutureTime(){
+		
+		String reqTime = criteria.get("time").getAsString();
+		
+		//remove time, if already there
+		super.removeCriteria("time");
+		
+		//add comparision to get matching time and greater time only
+		//this is temporary fix only. Real solution is to compare both Date and time
+		//right now, considering both has to go same day only
+		JsonObject reqTimeJs = new JsonObject();
+		reqTimeJs.addProperty("$gt", reqTime);
+		
+		criteria.add("time", reqTimeJs);
 		return this;
 	}
 }

@@ -32,13 +32,13 @@ import java.util.ArrayList;
 
 public class MongoDBConnection {
 
-	//private static MongoClient mongoClient = new MongoClient();
+	private static MongoClient mongoClient = new MongoClient();
 	//private static final MongoClientURI  mongoUri = new MongoClientURI("mongodb://interfaceuser:password1@127.9.110.4");
 	//private static final MongoClient mongoClient = new MongoClient(mongoUri);
 	
 	private static final ServerAddress addr = new ServerAddress("127.9.110.4",27017);
 	
-	private static MongoClient mongoClient =null;
+	//private static MongoClient mongoClient =null;
 	
 	
 	public static MongoDatabase getInstance() {

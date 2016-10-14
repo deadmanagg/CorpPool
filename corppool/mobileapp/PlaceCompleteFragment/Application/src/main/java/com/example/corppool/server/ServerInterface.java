@@ -1,6 +1,7 @@
 package com.example.corppool.server;
 
 import com.example.android.common.logger.Log;
+import com.example.corppool.config.AppConfigurations;
 import com.example.corppool.model.Feed;
 
 import org.json.JSONArray;
@@ -14,14 +15,15 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 
 /**
  * Created by deepansh on 10/9/2016.
  */
 public class ServerInterface  {
 
-    private static final String urlToPostFeed = "http://jbossews-deepansh.rhcloud.com/corppool/rest/feeds";
-    private static String urlToGetFeeds = "http://jbossews-deepansh.rhcloud.com/corppool/rest/feeds/";
+    private static final String urlToPostFeed = AppConfigurations.defaultBaseUrl+"corppool/rest/feeds";
+    private static String urlToGetFeeds = AppConfigurations.defaultBaseUrl+"corppool/rest/feeds/";
 
     public static String POSTFeed(Feed feed){
         InputStream inputStream = null;
@@ -91,7 +93,8 @@ public class ServerInterface  {
 
         try {
 
-            String urlToGet =urlToGetFeeds+ reqFeed.getAsJsonForSearch();
+            //Double encoding done because it has slashes, thus server was decoding and considering this as another resource path
+            String urlToGet =urlToGetFeeds+ URLEncoder.encode(URLEncoder.encode(reqFeed.getAsJsonForSearch().toString(), "UTF-8"),"UTF-8");
             URL url = new URL(urlToGet);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 

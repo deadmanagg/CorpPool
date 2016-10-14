@@ -60,19 +60,19 @@ public class CommonUtils {
 
         //from req date
         Calendar c1 = Calendar.getInstance();
-        c1.set(Calendar.YEAR,Integer.valueOf(date1.substring(0,3)));
-        c1.set(Calendar.MONTH,Integer.valueOf(date1.substring(5, 6)));
-        c1.set(Calendar.DAY_OF_MONTH,Integer.valueOf(date1.substring(8, 9)));
-        c1.set(Calendar.HOUR_OF_DAY,Integer.valueOf(date1.substring(11,12)));
-        c1.set(Calendar.MINUTE,Integer.valueOf(date1.substring(13,14)));
+        c1.set(Calendar.YEAR,Integer.valueOf(date1.substring(0,4)));
+        c1.set(Calendar.MONTH,Integer.valueOf(date1.substring(5, 7)));
+        c1.set(Calendar.DAY_OF_MONTH,Integer.valueOf(date1.substring(8, 10)));
+        c1.set(Calendar.HOUR_OF_DAY,Integer.valueOf(date1.substring(11,13)));
+        c1.set(Calendar.MINUTE,Integer.valueOf(date1.substring(14,16)));
 
         //from req date
         Calendar c2 = Calendar.getInstance();
-        c2.set(Calendar.YEAR,Integer.valueOf(date2.substring(0,3)));
-        c2.set(Calendar.MONTH,Integer.valueOf(date2.substring(5, 6)));
-        c2.set(Calendar.DAY_OF_MONTH,Integer.valueOf(date2.substring(8, 9)));
-        c2.set(Calendar.HOUR_OF_DAY,Integer.valueOf(date2.substring(11,12)));
-        c2.set(Calendar.MINUTE,Integer.valueOf(date2.substring(13,14)));
+        c2.set(Calendar.YEAR,Integer.valueOf(date2.substring(0,4)));
+        c2.set(Calendar.MONTH,Integer.valueOf(date2.substring(5, 7)));
+        c2.set(Calendar.DAY_OF_MONTH,Integer.valueOf(date2.substring(8, 10)));
+        c2.set(Calendar.HOUR_OF_DAY,Integer.valueOf(date2.substring(11,13)));
+        c2.set(Calendar.MINUTE,Integer.valueOf(date2.substring(14,16)));
 
         long diff = c2.getTimeInMillis() -c1.getTimeInMillis();
 

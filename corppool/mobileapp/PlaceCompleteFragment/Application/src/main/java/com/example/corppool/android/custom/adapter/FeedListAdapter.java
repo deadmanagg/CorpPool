@@ -69,6 +69,7 @@ public class FeedListAdapter extends ArrayAdapter<String> {
         try {
              timeDiff = CommonUtils.getTimeDifference(date1, date2);
         }catch(Exception e){
+            System.out.println(e);
             timeDiff = new TimeDifference();
         }
         minutesAway.setText(timeDiff.format());

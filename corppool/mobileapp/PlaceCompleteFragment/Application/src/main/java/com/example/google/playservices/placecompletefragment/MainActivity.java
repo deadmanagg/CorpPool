@@ -75,6 +75,10 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
 
     private TextView startDate;
 
+    //original Textview will have user friendly values like Today, tommorrow etc
+    //this will have actual date value
+    private String startDateVal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,6 +131,13 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
         timePicker = (TimePicker)findViewById(R.id.timePicker1);
         startDate = (TextView)findViewById(R.id.startDate);
 
+        //set default date in String
+        Calendar mcurrentDate = Calendar.getInstance();
+        int mYear = mcurrentDate.get(Calendar.YEAR);
+        int mMonth = mcurrentDate.get(Calendar.MONTH);
+        int mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
+        startDateVal = ""+mDay+"/"+(mMonth+1)+"/"+mYear;
+
         //set listener to show dialog for date
         startDate.setOnClickListener(new View.OnClickListener() {
 
@@ -148,7 +159,11 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
                         // TODO Auto-generated method stub
                         // *      Your code   to get date and time    *//*
                         selectedmonth = selectedmonth + 1;
-                        startDate.setText("" + selectedday + "/" + selectedmonth + "/" + selectedyear);
+
+                        //set value Date Variable as well
+                        startDateVal = "" + selectedday + "/" + selectedmonth + "/" + selectedyear;
+
+                        startDate.setText(startDateVal);
                     }
                     }
 
@@ -271,7 +286,9 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
         intent.putExtra("name","DeepanshMobile");
         intent.putExtra("userid","FirstAndroidApp");
         //intent.putExtra("date",datePicker.getDayOfMonth()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getYear());
-        intent.putExtra("date",startDate.getText().toString());
+        intent.putExtra("date_display",startDate.getText().toString());
+        intent.putExtra("date",startDateVal);
+
         intent.putExtra("time",timePicker.getHour()+":"+timePicker.getMinute());
 
         //Once Pojo serialisze is available, pass whole place object

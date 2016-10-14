@@ -1,6 +1,7 @@
 package com.corppool.mobile.service;
 
 import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -50,13 +51,16 @@ public class FeedsService {
 		String resultJson = "";
 		try {
 			
+			//Decode, once decode is done by server, this is second decoding since
+			//client has to encode twice to solve / issues in the url
+			query = URLDecoder.decode(query,"UTF-8");
 			//filter request
 			
 			//TODO, use controller to get singleton object
 			FeedSearchController cntrl = new FeedSearchController(query);
 			
 			//remove default criteria
-			String filteredQuery = cntrl.removeDefaultFactors().addNearStartLocDist(10).build().toString();
+			String filteredQuery = cntrl.removeDefaultFactors().addNearStartLocDist(10).addFutureTime().build().toString();
 			
 			DBObject o = (DBObject) JSON.parse(filteredQuery);
 			BasicDBObject b = (BasicDBObject)o;
