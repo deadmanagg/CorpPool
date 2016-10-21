@@ -1,5 +1,6 @@
 package com.corppool.mongodb.dao;
 
+import com.corppool.util.SystemUtil;
 import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;
 import com.mongodb.BulkWriteOperation;
@@ -32,22 +33,29 @@ import java.util.ArrayList;
 
 public class MongoDBConnection {
 
-	private static MongoClient mongoClient = new MongoClient();
+	//private static MongoClient mongoClient = new MongoClient();
 	//private static final MongoClientURI  mongoUri = new MongoClientURI("mongodb://interfaceuser:password1@127.9.110.4");
 	//private static final MongoClient mongoClient = new MongoClient(mongoUri);
 	
 	private static final ServerAddress addr = new ServerAddress("127.9.110.4",27017);
 	
-	//private static MongoClient mongoClient =null;
+	private static MongoClient mongoClient =null;
 	
 	
 	public static MongoDatabase getInstance() {
 		
-		
+	
 		if(mongoClient == null){
+			
+			//TOODO, quick fix, for windows --> local, else Linux --> Cloud
+			if(SystemUtil.isWindows()){
+				mongoClient = new MongoClient();
+			}
+			else{
 			List<MongoCredential> creds = new ArrayList<MongoCredential>();
 			creds.add(MongoCredential.createCredential("interfaceuser", "jbossews", "password1".toCharArray()));
 			mongoClient = new MongoClient(addr,creds);
+			}
 		}
 		//return  mongoClient.getDatabase("db");
 		return  mongoClient.getDatabase("jbossews");

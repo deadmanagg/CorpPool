@@ -31,6 +31,11 @@ import com.google.android.gms.maps.model.LatLng;
 import android.app.Application;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+
+import android.app.Fragment;
+import android.app.FragmentTransaction;
+
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -55,7 +60,7 @@ import org.json.JSONObject;
 import java.util.Calendar;
 import java.util.EventListener;
 
-public class MainActivity extends SampleActivityBase implements PlaceSelectionListener,View.OnClickListener {
+public class MainActivity extends SampleActivityBase implements PlaceSelectionListener,View.OnClickListener,ConfirmFeedSubmit.OnFragmentInteractionListener {
 
     private TextView mPlaceDetailsText;
 
@@ -266,6 +271,7 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
                 // do your code
                 intent = "POST";
                 new PostFeed().execute();
+               // showConfirmPage();
                 break;
 
             case R.id.find_button:
@@ -304,6 +310,19 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
         finish();
     }
 
+
+    public void onFragmentInteraction(Uri uri){
+        //you can leave it empty
+    }
+    public void showConfirmPage(){
+
+        Fragment fragment= new ConfirmFeedSubmit();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment); // fragment container id in first parameter is the  container(Main layout id) of Activity
+        transaction.addToBackStack(null);  // this will manage backstack
+        transaction.commit();
+    }
+
     private class PostFeed extends AsyncTask<String, Void, Void> {
 
         private String response;
@@ -316,7 +335,7 @@ public class MainActivity extends SampleActivityBase implements PlaceSelectionLi
                 feed.setName("DeepanshMobile");
                 feed.setUserid("FirstAndroidApp");
                 //feed.setDate(datePicker.getDayOfMonth()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getYear());
-                feed.setDate(startDate.getText().toString());
+                feed.setDate(startDateVal);
                 feed.setTime(timePicker.getHour()+":"+timePicker.getMinute());
 
                 feed.setStartAddress(startLoc.getAddress().toString());

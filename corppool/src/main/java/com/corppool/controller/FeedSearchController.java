@@ -90,4 +90,48 @@ public class FeedSearchController extends SearchController<FeedSearchController>
 		criteria.add("time", reqTimeJs);
 		return this;
 	}
+	
+	//TODO Move common code in startendLocDist to common function
+public FeedSearchController addNearEndLocDist(double maxDist){
+		
+		//Get start location attribute
+		JsonObject startLoc = criteria.get("endLoc").getAsJsonObject();
+		
+		//get coordinates
+		JsonArray reqCord = startLoc.get("coordinates").getAsJsonArray();
+		
+		//Create new JsonObject of the content of start loc, which will be lost
+		JsonObject startLocVal = (JsonObject) CloningUtil.deepClone(startLoc);
+		
+		//Now add MongoDb geo spatial way of searching
+		//https://docs.mongodb.com/manual/reference/operator/query/near/
+		/*db.places.find(
+				   {
+				     location:
+				       { $near :
+				          {
+				            $geometry: { type: "Point",  coordinates: [ -73.9667, 40.78 ] },
+				            $minDistance: 1000,
+				            $maxDistance: 5000
+				          }
+				       }
+				   }
+				)*/
+		
+		JsonObject near = new JsonObject();
+		near.add("$geometry", startLocVal);
+		near.addProperty("$maxDistance"	, maxDist*1000);  //convert distance to KMs
+		
+		//add near to original
+		startLoc.add("$near", near);
+		
+		//remove old fields
+		startLoc.remove("type");
+		startLoc.remove("coordinates");
+		
+		
+		return this;
+	}
+
+	
 }
