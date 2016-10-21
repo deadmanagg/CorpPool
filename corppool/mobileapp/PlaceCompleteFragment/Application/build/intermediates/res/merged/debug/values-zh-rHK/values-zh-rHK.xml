@@ -46,6 +46,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"在手機開啟"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"登入"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"透過 Google 登入"</string>
+    <string name="messenger_send_button_text">傳送</string>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"投放"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"正在搜尋裝置…"</string>
     <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"連線至裝置"</string>

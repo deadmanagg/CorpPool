@@ -46,6 +46,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Buksan sa telepono"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Mag-sign in"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Mag-sign in sa Google"</string>
+    <string name="messenger_send_button_text">Ipadala</string>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"I-cast"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Naghahanap ng mga device…"</string>
     <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"Kumonekta sa device"</string>

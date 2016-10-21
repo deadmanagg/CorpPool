@@ -13,19 +13,24 @@
    See the License for the specific language governing permissions and
    limitations under the License.
   -->
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/container"
-        tools:context="com.example.google.playservices.placecompletefragment.ConfirmFeedSubmit">
+        tools:context="com.example.corppool.controller.ConfirmFeedSubmit">
 
-    <!--    <fragment android:name="com.example.google.playservices.placecompletefragment.AddNewFeed"
+    <!--    <fragment android:name="com.example.corppool.controller.AddNewFeed"
             android:id="@+id/list"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -33,4 +38,14 @@
 
 
     </FrameLayout>
-</ScrollView>
+
+<com.facebook.login.widget.LoginButton
+android:id="@+id/fb_login_button"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_gravity="center_horizontal"
+android:layout_marginTop="10dp"
+android:layout_marginBottom="10dp" />
+
+    </LinearLayout>
+    </ScrollView>

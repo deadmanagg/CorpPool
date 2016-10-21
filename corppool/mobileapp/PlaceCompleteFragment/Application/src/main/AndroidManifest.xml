@@ -14,7 +14,7 @@
    limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.google.playservices.placecompletefragment"
+    package="com.example.corppool.controller"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -34,8 +34,12 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCkBxLSWEJD531G2dEgQp-FxvdMLrMBcyY" />
 
+
+        <!-- for fb login -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.corppool.controller.MainActivity"
             android:launchMode="singleTop"
             android:label="@string/app_name"
 
@@ -47,16 +51,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Feeds_main"
+            android:name="com.example.corppool.controller.Feeds_main"
             android:label="@string/title_activity_feeds_main"
-            android:parentActivityName="com.example.google.playservices.placecompletefragment.MainActivity"
+            android:parentActivityName="com.example.corppool.controller.MainActivity"
             >
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
           <!--  <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.google.playservices.placecompletefragment.MainActivity" />-->
+                android:value="com.example.corppool.controller.MainActivity" />-->
         </activity>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

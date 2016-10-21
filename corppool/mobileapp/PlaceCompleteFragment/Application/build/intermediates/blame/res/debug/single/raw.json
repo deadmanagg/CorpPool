@@ -1,9 +1,5 @@
 [
     {
-        "merged": "E:\\CODES\\SamplesAndroid\\android-play-places-master\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
-        "source": "E:\\CODES\\SamplesAndroid\\android-play-places-master\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-analytics\\8.4.0\\res\\raw\\gtm_analytics"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-analytics\\8.4.0\\res\\raw\\gtm_analytics"
     }

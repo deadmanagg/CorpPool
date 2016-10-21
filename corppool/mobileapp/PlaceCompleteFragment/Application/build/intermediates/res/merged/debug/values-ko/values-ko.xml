@@ -46,6 +46,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"스마트폰에서 열기"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"로그인"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Google 계정으로 로그인"</string>
+    <string name="messenger_send_button_text">보내기</string>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"전송"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"기기 검색 중…"</string>
     <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"기기에 연결"</string>

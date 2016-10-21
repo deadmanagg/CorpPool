@@ -9,12 +9,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.corppool.controller.R;
 import com.example.corppool.model.Feed;
 import com.example.corppool.model.TimeDifference;
 import com.example.corppool.util.CommonUtils;
 import com.example.corppool.util.StringUtils;
-import com.example.google.playservices.placecompletefragment.R;
-
 import java.util.List;
 
 /**

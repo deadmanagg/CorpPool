@@ -39,5 +39,6 @@
     <string name="emailLabel">E-Mail</string>
     <string name="mobileLabel">Mobile</string>
 
-
+    <!-- Facebook app id for fb login -->
+    <string name="facebook_app_id">115702192234433</string>
 </resources>
