@@ -35,7 +35,9 @@
 
     <string name="milesAwayText">Away</string>
     <string name="minutesAwayTxt">in starting</string>
-
+    <string name="confirmfeed">CONFIRM</string>
+    <string name="emailLabel">E-Mail</string>
+    <string name="mobileLabel">Mobile</string>
 
 
 </resources>

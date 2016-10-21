@@ -320,6 +320,10 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_add_new_feed.xml",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\src\\main\\res\\layout\\fragment_add_new_feed.xml"
+    },
+    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_prediction.xml",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_item_prediction.xml"
     },

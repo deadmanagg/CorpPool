@@ -17,110 +17,20 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/container"
         tools:context="com.example.google.playservices.placecompletefragment.ConfirmFeedSubmit">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/vertical_page_margin"
-        android:paddingLeft="@dimen/horizontal_page_margin"
-        android:paddingRight="@dimen/horizontal_page_margin"
-        android:paddingTop="@dimen/vertical_page_margin">
 
-        <TextView
-            android:text="@string/intro_message"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal" />
+    <!--    <fragment android:name="com.example.google.playservices.placecompletefragment.AddNewFeed"
+            android:id="@+id/list"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />-->
 
 
-
-            <fragment
-                android:id="@+id/startLoc"
-                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                />
-
-
-
-            <fragment
-                android:id="@+id/endLoc"
-                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-
-        <TimePicker
-            android:id="@+id/timePicker1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:timePickerMode="spinner"
-            android:layout_gravity="center_horizontal"
-            >
-        </TimePicker>
-        <!--<DatePicker
-            android:id="@+id/datePicker1"
-            android:layout_width="wrap_content"
-            android:datePickerMode="spinner"
-            android:calendarViewShown="false"
-            android:layout_height="wrap_content" >
-        </DatePicker>
--->
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/defaultDay"
-            android:id="@+id/startDate"
-            android:layout_gravity="center_horizontal" />
-
-        <!--<TextView
-            android:text="@string/selected_place"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />-->
-
-        <Button
-            android:id="@+id/find_button"
-            android:text="@string/rider"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_marginBottom="@dimen/margin_medium"
-            android:layout_gravity="center" />
-
-        <Button
-            android:id="@+id/post_button"
-            android:text="@string/driver"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_marginBottom="@dimen/margin_medium"
-            android:layout_gravity="center" />
-       <!-- <TextView
-            android:id="@+id/place_details"
-            android:autoLink="all"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />-->
-
-        <!--
-        <TextView
-            android:id="@+id/place_attribution"
-            android:autoLink="all"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/margin_medium" />-->
-    </LinearLayout>
     </FrameLayout>
 </ScrollView>
