@@ -2,11 +2,12 @@ package com.example.corppool.model;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by deepansh on 10/9/2016.
  */
-public class Location {
+public class Location  implements JSONSerializable{
 
     private String type;
     private double[] coordinates;
@@ -60,5 +61,16 @@ public class Location {
     public void set_long(double _long) {
         this._long = _long;
     }
-}
+
+    public JSONObject getAsJson() throws JSONException {
+
+
+        JSONObject locO = new JSONObject();
+        locO.put("type", getType());
+        locO.put("coordinates", getCoordinates());
+
+        return locO;
+
+    }
+    }
 

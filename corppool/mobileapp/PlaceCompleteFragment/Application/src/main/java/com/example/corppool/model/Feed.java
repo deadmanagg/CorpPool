@@ -6,10 +6,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.List;
+
 /**
  * Created by deepansh on 10/9/2016.
  */
-public class Feed {
+public class Feed implements JSONSerializable {
 
     private String _id;
     private String userid;
@@ -27,6 +29,9 @@ public class Feed {
 
     private String nMilesAway;
     private String xMinutesAway;
+
+    private User driver;
+    private List<User> rider;
 
     //below constructor will be used to display feed.
     //this constructor is not useful to send info to server
@@ -116,16 +121,6 @@ public class Feed {
 
     public JSONObject getAsJson() throws JSONException{
 
-        JSONObject startLocO = new JSONObject();
-        startLocO.put("type", startLoc.getType());
-        startLocO.put("coordinates", startLoc.getCoordinates());
-
-
-
-        JSONObject endLocO = new JSONObject();
-        endLocO.put("type", endLoc.getType());
-        endLocO.put("coordinates", endLoc.getCoordinates());
-
         JSONObject o = new JSONObject();
         o.put("name", name);
         o.put("userid", userid);
@@ -133,10 +128,14 @@ public class Feed {
         o.put("city", city);
         o.put("date", date);
         o.put("time", time);
-        o.put("startLoc", startLocO);
-        o.put("endLoc",endLocO);
+        o.put("startLoc", startLoc.getAsJson());
+        o.put("endLoc",endLoc.getAsJson());
         o.put("startAddress",startAddress);
         o.put("endAddress",endAddress);
+
+        //there will be exactly one driver
+        o.put("driver",driver.getAsJson());
+
 
         return  o;
 
@@ -214,4 +213,19 @@ public class Feed {
 
     }
 
+    public User getDriver() {
+        return driver;
+    }
+
+    public void setDriver(User driver) {
+        this.driver = driver;
+    }
+
+    public List<User> getRider() {
+        return rider;
+    }
+
+    public void setRider(List<User> rider) {
+        this.rider = rider;
+    }
 }

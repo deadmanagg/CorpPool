@@ -97,7 +97,7 @@
                 android:text="@string/mobileLabel"
                 />
             <EditText
-            android:id="@+id/reqMobileNum"
+            android:id="@+id/reqPhoneNum"
             android:autoLink="all"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"

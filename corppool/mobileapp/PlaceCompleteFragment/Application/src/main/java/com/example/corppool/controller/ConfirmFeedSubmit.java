@@ -3,14 +3,20 @@ package com.example.corppool.controller;
 import android.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.corppool.config.AppConstants;
 import com.example.corppool.model.Feed;
 import com.example.corppool.controller.R;
+import com.example.corppool.model.User;
+import com.example.corppool.server.ServerInterface;
 
 
 /**
@@ -21,7 +27,7 @@ import com.example.corppool.controller.R;
  * Use the {@link ConfirmFeedSubmit#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ConfirmFeedSubmit extends Fragment {
+public class ConfirmFeedSubmit extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,6 +44,11 @@ public class ConfirmFeedSubmit extends Fragment {
     private TextView reqEndLoc;
     private TextView reqStartDate;
     private TextView reqStartTime;
+
+    private Button btnConfirmSubmit;
+
+    private EditText reqEmailId;
+    private EditText reqPhoneNum;
 
     private OnFragmentInteractionListener mListener;
 
@@ -74,6 +85,10 @@ public class ConfirmFeedSubmit extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        //set the static variable of main activity to track which fragment currently active
+        MainActivity.currentView = "confirm_feed";
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_confirm_feed_submit, container, false);
     }
@@ -121,6 +136,15 @@ public class ConfirmFeedSubmit extends Fragment {
         reqStartTime.setText(feed.getTime());
         reqStartLoc.setText(feed.getStartAddress());
         reqStartDate.setText(feed.getDate());
+
+        //attach button variable
+        btnConfirmSubmit = (Button)getActivity().findViewById(R.id.confirmfeed_button);
+
+        btnConfirmSubmit.setOnClickListener(this);
+
+        //attach editable text components
+        reqEmailId =(EditText)getActivity().findViewById(R.id.reqEmailId);
+        reqPhoneNum = (EditText)getActivity().findViewById(R.id.reqPhoneNum);
     }
 
     /**
@@ -136,10 +160,69 @@ public class ConfirmFeedSubmit extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+        void CallBackConfirmFeedSuccess(Feed feed);
     }
 
     private void setFeed(Feed feed){
         this.feed = feed;
     }
 
+    private class PostFeed extends AsyncTask<String, Void, Void> {
+
+        private String response;
+        protected void onPreExecute() {
+
+            //pDialog.show();
+
+            try {
+
+                feed.setName(AppConstants.defaulName);
+                feed.setUserid(AppConstants.defaulUserId);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        protected Void doInBackground(String... urls) {
+
+            response = ServerInterface.POSTFeed(feed);
+
+            return null;
+
+        }
+        protected void onPostExecute(Void unused) {
+            // NOTE: You can call UI Element here.
+            // pDialog.dismiss();
+            try {
+                System.out.println(response);
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        fillUserInfo();
+        //submit feed to the server
+        new PostFeed().execute();
+
+        //move to the next step
+        mListener.CallBackConfirmFeedSuccess(feed);
+    }
+
+    private void fillUserInfo(){
+        User user = new User();
+
+        //TODO, all validation of registration etc will go here
+        user.setEmailId(reqEmailId.getText().toString());
+        user.setPhoneNum(reqPhoneNum.getText().toString());
+        user.setIsAnonymous(true);
+        user.setIsDriver(true);
+
+        feed.setDriver(user);
+    }
 }

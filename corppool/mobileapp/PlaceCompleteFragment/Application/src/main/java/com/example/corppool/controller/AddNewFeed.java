@@ -2,6 +2,7 @@ package com.example.corppool.controller;
 
 import android.app.DatePickerDialog;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +56,7 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
     private DatePicker datePicker;
     private TimePicker timePicker;
 
-    private Feed feed;
+    private Feed feed = new Feed();
     private Button postButton;
 
     private String intent;
@@ -70,6 +72,9 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
     private String startDateVal;
 
     private OnFragmentInteractionListener mListener;
+
+    //instance of this view, this is to solve issue where back button on another fragment crashing app
+    private static View view;
 
     public AddNewFeed() {
         // Required empty public constructor
@@ -121,31 +126,29 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
     private void setStartLocation(Place place){
 
         Location loc = new Location();;
-        if(feed==null){
-            feed = new Feed();
 
-        }
         loc.setType("Point");
         loc.set_lat(place.getLatLng().latitude);
         loc.set_long(place.getLatLng().longitude);
 
         feed.setStartLoc(loc);
+        feed.setStartAddress(place.getAddress().toString());
 
         startLoc = place;
     }
 
     private void setEndLocation(Place place){
         Location loc = new Location();;
-        if(feed==null){
-            feed = new Feed();
 
-        }
         loc.setType("Point");
         loc.set_lat(place.getLatLng().latitude);
         loc.set_long(place.getLatLng().longitude);
 
         feed.setEndLoc(loc);
         endLoc = place;
+        feed.setEndAddress(place.getAddress().toString());
+
+
     }
 
 
@@ -181,7 +184,9 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
             case R.id.post_button:
                 // do your code
                 intent = "POST";
-                new PostFeed().execute();
+
+                //postfeed has been moved to confirm feed
+                //new PostFeed().execute();
 
                 //give control back to main activity
                 ((MainActivity)getActivity()).showConfirmPage(feed);
@@ -223,57 +228,23 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         getActivity().finish();
     }
 
-    private class PostFeed extends AsyncTask<String, Void, Void> {
-
-        private String response;
-        protected void onPreExecute() {
-
-            //pDialog.show();
-
-            try {
-
-                feed.setName("DeepanshMobile");
-                feed.setUserid("FirstAndroidApp");
-                //feed.setDate(datePicker.getDayOfMonth()+"/"+(datePicker.getMonth()+1)+"/"+datePicker.getYear());
-                feed.setDate(startDateVal);
-                feed.setTime(timePicker.getHour()+":"+timePicker.getMinute());
-
-                feed.setStartAddress(startLoc.getAddress().toString());
-                feed.setEndAddress(endLoc.getAddress().toString());
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-        }
-        protected Void doInBackground(String... urls) {
-
-            response = ServerInterface.POSTFeed(feed);
-
-            return null;
-
-        }
-        protected void onPostExecute(Void unused) {
-            // NOTE: You can call UI Element here.
-            // pDialog.dismiss();
-            try {
-                System.out.println(response);
-            } catch (Exception e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        }
-
-    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //activity is available after in this method, thus moved from create few
+        try {
 
+            //set the static variable of main activity to track which fragment currently active
+            MainActivity.currentView = "add_feed";
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_new_feed, container, false);
+            // Inflate the layout for this fragment
+            view = inflater.inflate(R.layout.fragment_add_new_feed, container, false);
+        } catch (InflateException e) {
+        /* map is already there, just return view as it is */
+
+        }
+        return view;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -363,6 +334,9 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         int mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
         startDateVal = ""+mDay+"/"+(mMonth+1)+"/"+mYear;
 
+        feed.setDate(startDateVal);
+        feed.setTime(timePicker.getHour()+":"+timePicker.getMinute());
+
         //set listener to show dialog for date
         startDate.setOnClickListener(new View.OnClickListener() {
 
@@ -389,6 +363,9 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
                         startDateVal = "" + selectedday + "/" + selectedmonth + "/" + selectedyear;
 
                         startDate.setText(startDateVal);
+
+                        //set feed variable
+                        feed.setDate(startDateVal);
                     }
                 }
 
@@ -401,6 +378,15 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
 
             }
         });
+
+        //set listener for time picker
+        timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+
+            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+                feed.setTime(hourOfDay+":"+minute);
+            }
+        });
+
         postButton = (Button)getActivity().findViewById(R.id.post_button);
 
         postButton.setOnClickListener(this);
@@ -423,4 +409,5 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }

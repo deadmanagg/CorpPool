@@ -33,4 +33,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<string name="confirm_feed_msg_not_logged_in">We\'ll notify you once someone sends request. To see all requests and other features kindly register</string>
+    <string name="title_route_submit">Route Submitted</string>
+    <string name="msg_exit_on_back">Press back button again to exit the application</string>
+
+
 </resources>
