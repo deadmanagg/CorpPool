@@ -1,0 +1,127 @@
+-- create schema corppool_db manually
+
+CREATE TABLE `corppool_setup_config` (
+  `id_setup_config` int(11) NOT NULL AUTO_INCREMENT,
+  `configname` varchar(45) NOT NULL COMMENT 'Name of the configuration',
+  `configvalue` varchar(45) NOT NULL COMMENT 'Value of the configuration, it can be multi selected',
+  `configaltvalue` varchar(45) DEFAULT NULL COMMENT 'alternative value of config, this is not in use as of now',
+  `configdescription` varchar(250) DEFAULT NULL COMMENT 'Detailed description of what configuration is used for.',
+  `createdby` varchar(45) NOT NULL,
+  `datecreated` date NOT NULL,
+  `modifiedby` varchar(45) DEFAULT NULL,
+  `modifieddate` date DEFAULT NULL,
+  PRIMARY KEY (`id_setup_config`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COMMENT='stores all the configuration which are at Application level.\n';
+
+
+----------- either manually copy data or use from the table directly
+insert into corppool_db.corppool_setup_config
+
+SELECT * FROM kplok_dev_db.lok_setup_config;
+
+
+CREATE TABLE `emailsent` (
+  `EMAILSENTID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Auto generated EmailsentId, used to track all outgoing emails',
+  `OBJECTTYPE` varchar(50) NOT NULL,
+  `OBJECTID` varchar(45) NOT NULL,
+  `TEMPLATEID` int(11) DEFAULT NULL,
+  `TOLIST` varchar(255) DEFAULT NULL,
+  `FROMEMAIL` varchar(255) DEFAULT NULL,
+  `CCLIST` varchar(255) DEFAULT NULL,
+  `BODY` varchar(4000) DEFAULT NULL,
+  `DATECREATED` date DEFAULT NULL,
+  `CREATEDBY` varchar(50) DEFAULT NULL,
+  `EMAILTYPE` varchar(45) DEFAULT NULL COMMENT 'Email type is additional identifier, second level. For e.g. for reminder, it will have reminder type 1 2 3 etc',
+  `SUBJECT` varchar(200) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `datesent` varchar(45) DEFAULT NULL,
+  `numofattempts` int(11) DEFAULT NULL,
+  `errormessage` varchar(1000) DEFAULT NULL,
+  `detailerrormessage` varchar(4000) DEFAULT NULL,
+  PRIMARY KEY (`EMAILSENTID`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1 COMMENT='Having records of all the emails that are sent by the java application running. ';
+
+
+
+CREATE TABLE `emailpending` (
+  `idemailpending` int(11) NOT NULL AUTO_INCREMENT,
+  `sentemailfkid` int(11) DEFAULT NULL,
+  `datecreated` date DEFAULT NULL,
+  PRIMARY KEY (`idemailpending`),
+  KEY `sentemailfkid_idx` (`sentemailfkid`),
+  CONSTRAINT `sentemailfkid` FOREIGN KEY (`sentemailfkid`) REFERENCES `emailsent` (`EMAILSENTID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Has entries for the emails that are suppossed to be sent out.\nEntries will be deleted as soon as attempt is made to sent email out.';
+
+
+CREATE TABLE `emailtemplate` (
+  `EMAILTEMPLATEID` int(11) NOT NULL,
+  `FROMEMAIL` varchar(100) DEFAULT NULL,
+  `TOLIST` varchar(255) DEFAULT NULL,
+  `CCLIST` varchar(255) DEFAULT NULL,
+  `SUBJECT` varchar(255) DEFAULT NULL,
+  `BODY` varchar(4000) DEFAULT NULL COMMENT 'Html formatted body. It should be having replacement variable as ${} only those variables would be replaced by the value.',
+  `DATECREATED` date DEFAULT NULL,
+  PRIMARY KEY (`EMAILTEMPLATEID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Stores all the templates for which email is to be generated. The set up template cannot be changed.\nFor every new page or template, develoer has to add the template. Supports one template for each table.\n';
+
+
+CREATE TABLE `emailoutbound` (
+  `objectid` varchar(20) NOT NULL,
+  `objecttype` varchar(100) NOT NULL,
+  `emailtype` varchar(45) NOT NULL COMMENT 'This is for which type the email is to be generated. It can be billing, prereminder, reminder, dueletter, etc.',
+  PRIMARY KEY (`objectid`,`objecttype`,`emailtype`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='It has primary key & its table name for which email is to be generated. The process which add data to this table and then remove it on completion.';
+
+
+CREATE TABLE `corppool_db`.`corpfeeds` (
+  `idcorpFeeds` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `mongodb_id` VARCHAR(100) NULL COMMENT 'This is _id column of the mongo db feed',
+  `driveruserid` VARCHAR(45) NULL COMMENT 'This will be foreign key of User. There will be a record of anonymous rider in User table.',
+  `driveremailid` VARCHAR(45) NULL COMMENT '',
+  `driverphonenum` VARCHAR(45) NULL COMMENT '',
+  `datecreated` DATE NULL COMMENT 'Trigger will default it to sysdate',
+  PRIMARY KEY (`idcorpFeeds`)  COMMENT '')
+COMMENT = 'basic transactional information of feeds for offered ride. \nWill be used for transactions, such as email, reports etc';
+
+
+
+USE `corppool_db`;
+
+DELIMITER $$
+
+DROP TRIGGER IF EXISTS corppool_db.emailsent_AFTER_INSERT$$
+USE `corppool_db`$$
+CREATE DEFINER=`root`@`localhost` TRIGGER `corppool_db`.`emailsent_AFTER_INSERT` AFTER INSERT ON `emailsent` FOR EACH ROW
+BEGIN
+-- create entry into pending table to sent out email, if status set is ready
+if new.status = 'Ready' 
+then
+ 
+ insert into emailpending (sentemailfkid,
+							datecreated)
+				values   (new.emailsentid,
+                          sysdate());
+	
+end if;
+END$$
+DELIMITER ;
+USE `corppool_db`;
+
+DELIMITER $$
+
+DROP TRIGGER IF EXISTS corppool_db.emailsent_AFTER_UPDATE$$
+USE `corppool_db`$$
+CREATE DEFINER=`root`@`localhost` TRIGGER `corppool_db`.`emailsent_AFTER_UPDATE` AFTER UPDATE ON `emailsent` FOR EACH ROW
+BEGIN
+-- create entry into pending table to sent out email, if status set is ready
+if new.status = 'Ready' 
+then
+ 
+ insert into emailpending (sentemailfkid,
+							datecreated)
+				values   (new.emailsentid,
+                          sysdate());
+	
+end if;
+END$$
+DELIMITER ;

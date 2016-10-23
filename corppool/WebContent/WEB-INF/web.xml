@@ -12,5 +12,18 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	<context-param>
+		<param-name>notificationtypelist</param-name>
+		<param-value>com.deadman.notifications.EmailNotification</param-value>
+	</context-param>
+	
+	  <listener>
+	<listener-class>
+             com.deadman.notifications.NotificationStarter
+        </listener-class>
+   </listener>
+
+   
+	  
 
 </web-app>

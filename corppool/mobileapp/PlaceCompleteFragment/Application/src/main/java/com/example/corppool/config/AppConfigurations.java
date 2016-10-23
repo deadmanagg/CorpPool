@@ -5,7 +5,7 @@ package com.example.corppool.config;
  */
 public class AppConfigurations {
 
-    public static final String defaultBaseUrl = "http://jbossews-deepansh.rhcloud.com/";
-    //public static final String defaultBaseUrl = "http://Deadman:8080/";
+    //public static final String defaultBaseUrl = "http://jbossews-deepansh.rhcloud.com/";
+    public static final String defaultBaseUrl = "http://Deadman:8080/";
 
 }

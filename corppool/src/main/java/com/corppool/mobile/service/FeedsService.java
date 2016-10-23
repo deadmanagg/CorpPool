@@ -12,6 +12,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.corppool.controller.FeedSearchController;
+import com.corppool.controller.FeedsController;
 import com.corppool.mongodb.dao.MongoDBConnection;
 import com.google.gson.JsonObject;
 import com.mongodb.BasicDBList;
@@ -20,7 +21,7 @@ import com.mongodb.DBObject;
 import com.mongodb.util.JSON;
 
 @Path("/feeds")
-public class FeedsService {
+public class FeedsService extends MobileServices {
 
 	
 	@POST
@@ -30,7 +31,15 @@ public class FeedsService {
 		JsonObject o = new JsonObject();
 		try {
 			
-			MongoDBConnection.write("Feeds",(BasicDBObject) JSON.parse(feed));
+			BasicDBObject obj = (BasicDBObject) JSON.parse(feed);
+			MongoDBConnection.write("Feeds",obj);
+			
+			//store in db for sending email
+			FeedsController cntrl = factory.getFeedsController();
+			
+			//add new feed
+			cntrl.addFeed(obj);
+			cntrl.addEmailOutbound();
 			
 			o.addProperty("status", "Feed Added");
 			
