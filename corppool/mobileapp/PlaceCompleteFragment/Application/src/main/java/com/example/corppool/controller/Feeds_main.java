@@ -141,7 +141,7 @@ public class Feeds_main extends ListActivity  {
             String jsonStr = ServerInterface.GETFeeds(reqStartFeed);
             JSONArray jsonArr = new JSONArray();
                     try {
-                        jsonArr = ServerInterface.convertResponseToJSon(jsonStr);
+                        jsonArr = ServerInterface.convertResponseToJSonArr(jsonStr);
                     }catch(JSONException e){
                         e.printStackTrace();
                     }

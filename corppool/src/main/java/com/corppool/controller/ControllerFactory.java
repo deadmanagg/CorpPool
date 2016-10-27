@@ -28,6 +28,20 @@ public class ControllerFactory {
 
 		return feedsContrl;
 	}
+	
+	private UserController userContrl;
+
+	public synchronized UserController getUserController() {
+
+		
+			if (userContrl == null) {
+				userContrl = new UserController();
+				userContrl.setFactory(this);
+			}
+		
+
+		return userContrl;
+	}
 }
 
 

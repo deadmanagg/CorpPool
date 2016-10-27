@@ -17,6 +17,7 @@
 
 <resources>
     <string name="app_name">Fundoo CorpPool</string>
+    <string name="reg_title">Register</string>
     <string name="intro_message">
         <![CDATA[
         
@@ -38,6 +39,17 @@
     <string name="confirmfeed">CONFIRM</string>
     <string name="emailLabel">E-Mail</string>
     <string name="mobileLabel">Mobile</string>
+
+    <string name="btn_register">Register</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
 
     <!-- Facebook app id for fb login -->
     <string name="facebook_app_id">115702192234433</string>

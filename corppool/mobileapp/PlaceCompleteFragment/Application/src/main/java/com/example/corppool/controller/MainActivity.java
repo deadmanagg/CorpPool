@@ -24,8 +24,11 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.corppool.controller.R;
@@ -44,6 +47,8 @@ public class MainActivity extends SampleActivityBase implements ConfirmFeedSubmi
     public static String currentView = "";
     CallbackManager callbackManager;
 
+    private Button btnRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +59,16 @@ public class MainActivity extends SampleActivityBase implements ConfirmFeedSubmi
 
         setContentView(R.layout.activity_main);
 
+        //link button of register
+        btnRegister = (Button)findViewById(R.id.register);
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent i = new Intent(MainActivity.this,RegisterActivity.class);
+                startActivity(i);
+            }
+        });
 
         //tide up button
         linkFacebookButton();

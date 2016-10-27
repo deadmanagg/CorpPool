@@ -44,133 +44,91 @@
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="146" column="67" selection-start-line="146" selection-start-column="51" selection-end-line="146" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#5128#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Toast.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/widget/Toast.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="257" column="37" selection-start-line="257" selection-start-column="37" selection-end-line="257" selection-end-column="37" />
+              <caret line="136" column="35" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Context.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/content/Context.java">
+      <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/RegisterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="values.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values/values.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="376" column="47" selection-start-line="376" selection-start-column="47" selection-end-line="376" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.470589">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppConfigurations.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/config/AppConfigurations.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29955947">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Feed.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/Feed.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="175" column="59" selection-start-line="175" selection-start-column="58" selection-end-line="175" selection-end-column="59" />
-              <folding>
-                <element signature="e#2304#2305#0" expanded="true" />
-                <element signature="e#2333#2334#0" expanded="true" />
-                <element signature="e#2377#2378#0" expanded="true" />
-                <element signature="e#2413#2414#0" expanded="true" />
-                <element signature="e#3022#3023#0" expanded="true" />
-                <element signature="e#3057#3058#0" expanded="true" />
-                <element signature="e#3198#3199#0" expanded="true" />
-                <element signature="e#3231#3232#0" expanded="true" />
-                <element signature="e#5178#5179#0" expanded="true" />
-                <element signature="e#5207#5208#0" expanded="true" />
-                <element signature="e#5249#5250#0" expanded="true" />
-                <element signature="e#5285#5286#0" expanded="true" />
-                <element signature="e#5321#5322#0" expanded="true" />
-                <element signature="e#5349#5350#0" expanded="true" />
-                <element signature="e#5395#5396#0" expanded="true" />
-                <element signature="e#5429#5430#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="41" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.25486726">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#577#578#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#661#662#0" expanded="true" />
-                <element signature="e#696#697#0" expanded="true" />
-                <element signature="e#727#728#0" expanded="true" />
-                <element signature="e#775#776#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#850#851#0" expanded="true" />
-                <element signature="e#883#884#0" expanded="true" />
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-                <element signature="e#1016#1017#0" expanded="true" />
-                <element signature="e#1050#1051#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1151#1152#0" expanded="true" />
-                <element signature="e#1184#1185#0" expanded="true" />
-                <element signature="e#1215#1216#0" expanded="true" />
-                <element signature="e#1264#1265#0" expanded="true" />
-                <element signature="e#1304#1305#0" expanded="true" />
-                <element signature="e#1340#1341#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#1423#1424#0" expanded="true" />
-                <element signature="e#1465#1466#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddNewFeed.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/AddNewFeed.java">
+      <file leaf-file-name="Feeds_main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/Feeds_main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="162" column="13" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="13" />
+              <caret line="141" column="48" selection-start-line="141" selection-start-column="48" selection-end-line="141" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/LoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="173" column="59" selection-start-line="173" selection-start-column="59" selection-end-line="173" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2312#3034#0" expanded="true" />
+                <element signature="e#3033#3034#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Calendar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/java/util/Calendar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1033" column="22" selection-start-line="1033" selection-start-column="22" selection-end-line="1033" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#51816#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#26952#26953#0" expanded="false" />
+                <element signature="e#27016#27017#0" expanded="false" />
+                <element signature="e#35253#35254#0" expanded="false" />
+                <element signature="e#35290#35291#0" expanded="false" />
+                <element signature="e#35781#35782#0" expanded="false" />
+                <element signature="e#35827#35828#0" expanded="false" />
+                <element signature="e#37384#37385#0" expanded="false" />
+                <element signature="e#37429#37430#0" expanded="false" />
+                <element signature="e#38579#38580#0" expanded="false" />
+                <element signature="e#38606#38607#0" expanded="false" />
+                <element signature="e#38925#38926#0" expanded="false" />
+                <element signature="e#38961#38962#0" expanded="false" />
+                <element signature="e#39131#39132#0" expanded="false" />
+                <element signature="e#39161#39162#0" expanded="false" />
+                <element signature="e#39988#39989#0" expanded="false" />
+                <element signature="e#40023#40024#0" expanded="false" />
+                <element signature="e#42855#42856#0" expanded="false" />
+                <element signature="e#42893#42894#0" expanded="false" />
+                <element signature="e#43073#43074#0" expanded="false" />
+                <element signature="e#43104#43105#0" expanded="false" />
+                <element signature="e#43236#43237#0" expanded="false" />
+                <element signature="e#43282#43283#0" expanded="false" />
+                <element signature="e#43389#43390#0" expanded="false" />
+                <element signature="e#43436#43437#0" expanded="false" />
+                <element signature="e#48930#48947#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/server/ServerInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="102" column="52" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,10 +140,43 @@
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/ConfirmFeedSubmit.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="89" selection-end-column="50" />
+              <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.944445">
+              <caret line="82" column="37" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1523#1524#0" expanded="true" />
+                <element signature="e#1554#1555#0" expanded="true" />
+                <element signature="e#1602#1603#0" expanded="true" />
+                <element signature="e#1642#1643#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExternalURLs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/server/ExternalURLs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppConfigurations.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/config/AppConfigurations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2108,7 +2099,6 @@
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_feeds_main.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_feed.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/TimeDifference.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/server/ServerInterface.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/util/CommonUtils.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/google/playservices/placecompletefragment/Feeds_main.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/google/playservices/placecompletefragment/add_new_feed.java" />
@@ -2116,25 +2106,34 @@
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/google/playservices/placecompletefragment/ConfirmFeedSubmit.java" />
         <option value="$PROJECT_DIR$/Application/build.gradle" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/google/playservices/placecompletefragment/MainActivity.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/res/values/base-strings.xml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/android/custom/adapter/FeedListAdapter.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/Feeds_main.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_add_new_feed.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/config/AppConstants.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_confirm_feed_submit.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/JSONSerializable.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/User.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/Location.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/Feed.java" />
         <option value="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values/values.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/ConfirmFeedSubmit.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/AddNewFeed.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/MainActivity.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/config/AppConfigurations.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/util/SessionUtil.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/db/SQLiteHandler.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_register.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/values-v21/base-colors.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/values/base-strings.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/User.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/ConfirmFeedSubmit.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/server/ExternalURLs.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/server/ServerInterface.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/Feeds_main.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/MainActivity.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/RegisterActivity.java" />
       </list>
     </option>
   </component>
@@ -2179,6 +2178,29 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlaceCompleteFragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlaceCompleteFragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlaceCompleteFragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2241,7 +2263,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2265,29 +2287,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlaceCompleteFragment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlaceCompleteFragment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlaceCompleteFragment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2304,6 +2303,7 @@
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
+      <recent name="com.example.corppool.controller" />
       <recent name="com.example.google.playservices.placecompletefragment" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -2499,22 +2499,23 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900944" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900944" sideWeight="0.49460045" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12526998" sideWeight="0.47854078" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31367925" sideWeight="0.50215983" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37382075" sideWeight="0.50863934" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991362" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42570755" sideWeight="0.49352053" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2948113" sideWeight="0.4913607" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5778302" sideWeight="0.49784017" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2523585" sideWeight="0.49568033" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991362" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18466523" sideWeight="0.5214592" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2134434" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991362" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -2527,7 +2528,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33254716" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2614,7 +2614,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/MainActivity.java</url>
-          <line>75</line>
+          <line>90</line>
           <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
@@ -2626,72 +2626,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/MainActivity.java</url>
-          <line>145</line>
+          <line>160</line>
           <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/LoginActivity.java</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/LoginActivity.java</url>
+          <line>140</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="62" />
+      <option name="time" value="68" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/os/UserHandle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/app/ContextImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1770" column="0" selection-start-line="1770" selection-start-column="0" selection-end-line="1770" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/os/Parcel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="464" column="0" selection-start-line="464" selection-start-column="0" selection-end-line="464" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/app/ApplicationPackageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="333" column="0" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1-sources.jar!/android/support/v4/app/NavUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/app/ActivityManagerNative.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1-sources.jar!/android/support/v4/app/NavUtilsJB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/content/Intent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5190" column="0" selection-start-line="5190" selection-start-column="0" selection-end-line="5190" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/fragment_feed.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -2699,13 +2655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/java/util/Calendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="972" column="40" selection-start-line="972" selection-start-column="40" selection-end-line="972" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -2771,13 +2720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/values/base-strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_feeds_main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -2838,14 +2780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3004,48 +2938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1100#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/fragment_add_new_feed.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.7647057">
-          <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/Feeds_main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29402515">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/server/ServerInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3070,7 +2962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="76" column="43" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3088,70 +2979,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="41" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#1423#1424#0" expanded="true" />
-            <element signature="e#1465#1466#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/Feed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="175" column="59" selection-start-line="175" selection-start-column="58" selection-end-line="175" selection-end-column="59" />
-          <folding>
-            <element signature="e#2304#2305#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2377#2378#0" expanded="true" />
-            <element signature="e#2413#2414#0" expanded="true" />
-            <element signature="e#3022#3023#0" expanded="true" />
-            <element signature="e#3057#3058#0" expanded="true" />
-            <element signature="e#3198#3199#0" expanded="true" />
-            <element signature="e#3231#3232#0" expanded="true" />
-            <element signature="e#5178#5179#0" expanded="true" />
-            <element signature="e#5207#5208#0" expanded="true" />
-            <element signature="e#5249#5250#0" expanded="true" />
-            <element signature="e#5285#5286#0" expanded="true" />
-            <element signature="e#5321#5322#0" expanded="true" />
-            <element signature="e#5349#5350#0" expanded="true" />
-            <element signature="e#5395#5396#0" expanded="true" />
-            <element signature="e#5429#5430#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="376" column="47" selection-start-line="376" selection-start-column="47" selection-end-line="376" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3162,21 +2993,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/ConfirmFeedSubmit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="89" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/widget/Toast.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="257" column="37" selection-start-line="257" selection-start-column="37" selection-end-line="257" selection-end-column="37" />
-          <folding />
+          <folding>
+            <element signature="e#0#16037#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4804#4805#0" expanded="false" />
+            <element signature="e#4836#4837#0" expanded="false" />
+            <element signature="e#4926#4927#0" expanded="false" />
+            <element signature="e#4958#4959#0" expanded="false" />
+            <element signature="e#5122#5123#0" expanded="false" />
+            <element signature="e#5158#5159#0" expanded="false" />
+            <element signature="e#5273#5274#0" expanded="false" />
+            <element signature="e#5305#5306#0" expanded="false" />
+            <element signature="e#5979#5980#0" expanded="false" />
+            <element signature="e#6023#6024#0" expanded="false" />
+            <element signature="e#6114#6115#0" expanded="false" />
+            <element signature="e#6156#6157#0" expanded="false" />
+            <element signature="e#6651#6652#0" expanded="false" />
+            <element signature="e#6686#6687#0" expanded="false" />
+            <element signature="e#6806#6807#0" expanded="false" />
+            <element signature="e#6835#6836#0" expanded="false" />
+            <element signature="e#6959#6960#0" expanded="false" />
+            <element signature="e#6988#6989#0" expanded="false" />
+            <element signature="e#7127#7128#0" expanded="false" />
+            <element signature="e#7161#7162#0" expanded="false" />
+            <element signature="e#9222#9223#0" expanded="false" />
+            <element signature="e#9270#9271#0" expanded="false" />
+            <element signature="e#10669#10670#0" expanded="false" />
+            <element signature="e#10713#10714#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3184,6 +3032,122 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#167907#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#17993#17994#0" expanded="false" />
+            <element signature="e#18047#18048#0" expanded="false" />
+            <element signature="e#19310#19311#0" expanded="false" />
+            <element signature="e#19372#19373#0" expanded="false" />
+            <element signature="e#20031#20032#0" expanded="false" />
+            <element signature="e#20096#20097#0" expanded="false" />
+            <element signature="e#21387#21388#0" expanded="false" />
+            <element signature="e#21411#21412#0" expanded="false" />
+            <element signature="e#59843#59844#0" expanded="false" />
+            <element signature="e#59871#59872#0" expanded="false" />
+            <element signature="e#167875#167876#0" expanded="false" />
+            <element signature="e#167903#167904#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/util/SessionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1054#1055#0" expanded="false" />
+            <element signature="e#1116#1117#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/db/SQLiteHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1256#1257#0" expanded="false" />
+            <element signature="e#2783#2799#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/fragment_add_new_feed.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_register.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/values-v21/base-colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/values/base-strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.25">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -3191,9 +3155,118 @@
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/AddNewFeed.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="162" column="13" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="13" />
+          <caret line="217" column="68" selection-start-line="217" selection-start-column="68" selection-end-line="217" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/Feed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.944445">
+          <caret line="82" column="37" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+          <folding>
+            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/config/AppConfigurations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/server/ExternalURLs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/ConfirmFeedSubmit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/server/ServerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="52" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1033" column="22" selection-start-line="1033" selection-start-column="22" selection-end-line="1033" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#51816#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#26952#26953#0" expanded="false" />
+            <element signature="e#27016#27017#0" expanded="false" />
+            <element signature="e#35253#35254#0" expanded="false" />
+            <element signature="e#35290#35291#0" expanded="false" />
+            <element signature="e#35781#35782#0" expanded="false" />
+            <element signature="e#35827#35828#0" expanded="false" />
+            <element signature="e#37384#37385#0" expanded="false" />
+            <element signature="e#37429#37430#0" expanded="false" />
+            <element signature="e#38579#38580#0" expanded="false" />
+            <element signature="e#38606#38607#0" expanded="false" />
+            <element signature="e#38925#38926#0" expanded="false" />
+            <element signature="e#38961#38962#0" expanded="false" />
+            <element signature="e#39131#39132#0" expanded="false" />
+            <element signature="e#39161#39162#0" expanded="false" />
+            <element signature="e#39988#39989#0" expanded="false" />
+            <element signature="e#40023#40024#0" expanded="false" />
+            <element signature="e#42855#42856#0" expanded="false" />
+            <element signature="e#42893#42894#0" expanded="false" />
+            <element signature="e#43073#43074#0" expanded="false" />
+            <element signature="e#43104#43105#0" expanded="false" />
+            <element signature="e#43236#43237#0" expanded="false" />
+            <element signature="e#43282#43283#0" expanded="false" />
+            <element signature="e#43389#43390#0" expanded="false" />
+            <element signature="e#43436#43437#0" expanded="false" />
+            <element signature="e#48930#48947#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/Feeds_main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="141" column="48" selection-start-line="141" selection-start-column="48" selection-end-line="141" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="59" selection-start-line="173" selection-start-column="59" selection-end-line="173" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2312#3034#0" expanded="true" />
+            <element signature="e#3033#3034#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3201,27 +3274,18 @@
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="67" selection-start-line="146" selection-start-column="51" selection-end-line="146" selection-end-column="67" />
+          <caret line="136" column="35" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/controller/RegisterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25486726">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
           <folding>
-            <element signature="e#0#5128#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.470589">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/corppool/config/AppConfigurations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29955947">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>

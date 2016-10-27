@@ -218,7 +218,7 @@ public class ConfirmFeedSubmit extends Fragment implements View.OnClickListener 
         User user = new User();
 
         //TODO, all validation of registration etc will go here
-        user.setEmailId(reqEmailId.getText().toString());
+        user.setUserid(reqEmailId.getText().toString());
         user.setPhoneNum(reqPhoneNum.getText().toString());
         user.setIsAnonymous(true);
         user.setIsDriver(true);

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:16:1-72:12
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:16:1-87:12
 	xmlns:android
 		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:16:11-69
 	package
@@ -166,8 +166,36 @@ MERGED from [com.google.android.gms:play-services-measurement:8.4.0] E:\CODES\Co
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
 	android:name
 		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:25:22-64
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:28:5-71
+	android:name
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:28:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:29:5-71
+	android:name
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:29:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:30:5-72
+	android:name
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:30:22-69
+android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:32:5-89
+	android:name
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:32:30-86
+android:uses-permission#android.permission.READ_PHONE_STATE
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:33:5-83
+	android:name
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:33:30-80
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:34:5-88
+	android:name
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:34:30-85
+android:uses-permission#android.permission.READ_CALL_LOG
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:35:5-80
+	android:name
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:35:30-77
 application
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:28:5-70:19
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:37:5-85:19
 MERGED from [com.android.support:support-v4:23.1.1] E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v13:23.1.1] E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
@@ -270,61 +298,73 @@ MERGED from [com.android.support:support-v4:23.1.1] E:\CODES\CorpPool\CorpPool\c
 MERGED from [com.facebook.android:facebook-android-sdk:4.0.0] E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.0.0\AndroidManifest.xml:28:5-20
 MERGED from [com.android.support:support-v4:23.1.1] E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:31:9-41
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:40:9-41
 	android:allowBackup
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:29:9-35
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:38:9-35
 	android:icon
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:30:9-43
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:39:9-43
 	android:theme
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:32:9-40
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:41:9-40
 meta-data#com.google.android.geo.API_KEY
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:33:9-35:71
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:42:9-44:71
 	android:name
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:34:13-58
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:43:13-58
 	android:value
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:35:13-68
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:44:13-68
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:39:9-107
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:47:9-49:55
 	android:name
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:39:20-65
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:48:13-58
 	android:value
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:39:66-105
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:49:13-52
 activity#com.example.corppool.controller.MainActivity
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:41:9-52:20
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:51:9-60:20
 	android:label
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:44:13-45
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:53:13-45
 	android:name
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:42:13-72
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:52:13-41
 	android:launchMode
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:43:13-43
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:54:13-43
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:47:13-51:29
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:55:13-59:29
 action#android.intent.action.MAIN
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:48:17-69
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:56:17-69
 	android:name
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:48:25-66
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:56:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:50:17-77
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:58:17-77
 	android:name
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:50:27-74
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:58:27-74
 activity#com.example.corppool.controller.Feeds_main
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:53:9-63:20
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:61:9-72:20
 	android:label
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:55:13-62
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:63:13-62
 	android:parentActivityName
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:56:13-86
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:64:13-55
 	android:name
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:54:13-70
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:62:13-39
 activity#com.facebook.FacebookActivity
-ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:65:9-69:48
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:73:9-77:75
 	android:label
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:69:13-45
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:76:13-45
 	android:configChanges
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:66:13-113
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:75:13-96
 	android:theme
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:68:13-72
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:77:13-72
 	android:name
-		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:65:19-63
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:74:13-57
+activity#com.example.corppool.controller.LoginActivity
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:78:9-80:69
+	android:label
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:80:13-57
+	android:name
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:79:13-73
+activity#com.example.corppool.controller.RegisterActivity
+ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:82:9-84:58
+	android:label
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:84:13-46
+	android:name
+		ADDED from E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\src\main\AndroidManifest.xml:83:13-76
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-ads:8.4.0] E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-analytics:8.4.0] E:\CODES\CorpPool\CorpPool\corppool\mobileapp\PlaceCompleteFragment\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\AndroidManifest.xml:22:5-79

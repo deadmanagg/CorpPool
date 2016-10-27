@@ -125,3 +125,24 @@ then
 end if;
 END$$
 DELIMITER ;
+
+
+CREATE TABLE `corppool_db`.`appusers` (
+  `idappusers` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `uid` VARCHAR(100) NULL COMMENT '',
+  `userid` VARCHAR(100) NULL COMMENT '',
+  `password` VARCHAR(45) NULL COMMENT '',
+  `usertype` VARCHAR(45) NULL COMMENT 'admin, anno, enduser, sales etc',
+  `lastaccesseddate` DATE NULL COMMENT '',
+  `corpemail` VARCHAR(100) NULL COMMENT '',
+  `iscorpemailverified` INT NULL COMMENT '',
+  `isactive` INT NULL COMMENT '',
+  `islocked` INT NULL COMMENT '',
+  `lockedreason` VARCHAR(255) NULL COMMENT '',
+  `lastaccessdevice` VARCHAR(255) NULL COMMENT '',
+  `datecreated` DATE NULL COMMENT '',
+  `datemodified` DATE NULL COMMENT '',
+  `createdby` VARCHAR(100) NULL COMMENT '',
+  `modifiedby` VARCHAR(100) NULL COMMENT '',
+  PRIMARY KEY (`idappusers`)  COMMENT '',
+  UNIQUE INDEX `uid_UNIQUE` (`uid` ASC)  COMMENT '');

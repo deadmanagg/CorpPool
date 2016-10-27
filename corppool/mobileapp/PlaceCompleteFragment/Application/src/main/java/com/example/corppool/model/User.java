@@ -10,7 +10,7 @@ import org.json.JSONObject;
 public class User implements  JSONSerializable{
 
     //TODO this is not complete and will keep on adding new fields
-    private String emailId;
+    private String userid;
     private String phoneNum;
 
     private boolean isLoggedIn;
@@ -18,13 +18,14 @@ public class User implements  JSONSerializable{
     private boolean  isDriver;   //check if it driver of rider
 
     private boolean accountId;
+    private String  password;
 
-    public String getEmailId() {
-        return emailId;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
     public String getPhoneNum() {
@@ -67,10 +68,19 @@ public class User implements  JSONSerializable{
         this.accountId = accountId;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public JSONObject getAsJson() throws JSONException {
         JSONObject obj = new JSONObject();
-        obj.put("emailId",emailId);
+        obj.put("userid",userid);
         obj.put("phoneNum",phoneNum);
+        obj.put("password",password);
 
         //TODO, put more information here
 

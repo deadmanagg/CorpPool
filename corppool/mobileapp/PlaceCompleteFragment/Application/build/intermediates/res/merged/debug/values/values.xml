@@ -322,9 +322,16 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="accept">Accept</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
     <string name="app_name">Fundoo CorpPool</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="btn_register">Register</string>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_disconnect">Disconnect</string>
@@ -381,8 +388,15 @@
     <string name="defaultDay">Today</string>
     <string name="driver">Give A Ride</string>
     <string name="emailLabel">E-Mail</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
     <string name="facebook_app_id">115702192234433</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_name">Fullname</string>
+    <string name="hint_password">Password</string>
     <string name="intro_message">
         
         
@@ -408,6 +422,10 @@
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
     <string name="msg_exit_on_back">Press back button again to exit the application</string>
+    <string name="name">Fullname</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
     <string name="place_details">
@@ -423,6 +441,9 @@
         Website: %5$s
     
     </string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="reg_title">Register</string>
     <string name="rider">Find A Ride</string>
     <string name="selected_place">Last Selected Place:</string>
     <string name="sendText">Text or Call </string>
@@ -431,8 +452,10 @@
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
     <string name="title_activity_feeds_main">Available Options</string>
+    <string name="title_activity_login">Sign in</string>
     <string name="title_route_submit">Route Submitted</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
+    <string name="welcome">Welcome</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

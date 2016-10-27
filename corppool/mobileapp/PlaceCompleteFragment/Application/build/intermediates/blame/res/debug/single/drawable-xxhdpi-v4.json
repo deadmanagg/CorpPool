@@ -1,23 +1,23 @@
 [
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_plusone_medium_off_client.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\8.4.0\\res\\drawable-xxhdpi\\ic_plusone_medium_off_client.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal.9.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_google_signin_btn_text_dark_normal.9.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_disabled_mono_dark.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xxhdpi\\ic_media_route_disabled_mono_dark.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal.9.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_google_signin_btn_text_dark_normal.9.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_pause_light.png",
@@ -68,12 +68,12 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xxhdpi\\ic_cast_off_light.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal.9.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_google_signin_btn_text_light_normal.9.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal.9.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_google_signin_btn_text_light_normal.9.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\com_facebook_button_send_icon.png",
@@ -140,12 +140,12 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xxhdpi\\ic_media_route_on_0_mono_dark.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
@@ -196,12 +196,12 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_google_signin_btn_icon_light_disabled.9.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_list_longpressed_holo.9.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_on_mono_dark.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xxhdpi\\ic_media_route_on_mono_dark.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_off_mono_dark.png",
@@ -216,12 +216,12 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_plus_signin_btn_icon_light_pressed.9.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\places_ic_clear.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\drawable-xxhdpi\\places_ic_clear.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_cast_light.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xxhdpi\\ic_cast_light.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\places_ic_clear.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\drawable-xxhdpi\\places_ic_clear.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_plus_signin_btn_text_light_focused.9.png",
@@ -240,12 +240,12 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_focused.9.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_google_signin_btn_text_light_focused.9.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_btn_rating_star_on_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_focused.9.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_google_signin_btn_text_light_focused.9.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_cast_on_0_light.png",
@@ -292,12 +292,12 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xxhdpi\\ic_cast_disabled_light.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\messenger_bubble_large_white.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.0.0\\res\\drawable-xxhdpi-v4\\messenger_bubble_large_white.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_plus_signin_btn_icon_light_normal.9.png",
@@ -320,16 +320,16 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_google_signin_btn_icon_dark_normal.9.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\cast_ic_notification_1.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\8.4.0\\res\\drawable-xxhdpi\\cast_ic_notification_1.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal.9.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_google_signin_btn_icon_light_normal.9.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\cast_ic_notification_1.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\8.4.0\\res\\drawable-xxhdpi\\cast_ic_notification_1.png"
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_pressed.9.png",
@@ -340,12 +340,12 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_plus_signin_btn_text_dark_normal.9.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_plus_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png",
@@ -364,12 +364,12 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\drawable-xxhdpi\\powered_by_google_light.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_plus_signin_btn_icon_dark_focused.9.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xxhdpi\\common_plus_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\com_facebook_button_like_icon_selected.png",
@@ -444,11 +444,11 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_cast_on_2_light.png",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xxhdpi\\ic_cast_on_2_light.png"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable-xxhdpi\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_cast_on_2_light.png",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xxhdpi\\ic_cast_on_2_light.png"
     }
 ]
