@@ -7,27 +7,27 @@ package com.example.corppool.controller;
  */
 
 
-        import android.app.Activity;
-        import android.app.ProgressDialog;
-        import android.content.Intent;
-        import android.os.AsyncTask;
-        import android.os.Bundle;
-        import android.util.Log;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.Toast;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-        import com.example.corppool.db.SQLiteHandler;
-        import com.example.corppool.server.ServerInterface;
-        import com.example.corppool.util.SessionUtil;
+import com.example.corppool.db.SQLiteHandler;
+import com.example.corppool.server.ServerInterface;
+import com.example.corppool.util.SessionUtil;
 
-        import org.json.JSONArray;
-        import org.json.JSONException;
-        import org.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-        import java.util.HashMap;
-        import java.util.Map;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends Activity {
     private static final String TAG = LoginActivity.class.getSimpleName();
@@ -103,7 +103,7 @@ public class LoginActivity extends Activity {
 
     /**
      * function to verify login details in mysql db
-     * */
+     */
     private void checkLogin(final String email, final String password) {
         // Tag used to cancel the request
         String tag_string_req = "req_login";
@@ -114,7 +114,6 @@ public class LoginActivity extends Activity {
         new Login().execute(email, password);
         //hideDialog();
     }
-
 
 
     private class Login extends AsyncTask<String, String, JSONObject> {
@@ -141,15 +140,16 @@ public class LoginActivity extends Activity {
             String email = args[0];
             String pass = args[1];
             // Getting JSON from URL
-            String jsonStr = ServerInterface.login(email,pass);
+            String jsonStr = ServerInterface.login(email, pass);
             JSONObject jsonArr = new JSONObject();
             try {
                 jsonArr = ServerInterface.convertResponseToJSon(jsonStr);
-            }catch(JSONException e){
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
             return jsonArr;
         }
+
         @Override
         protected void onPostExecute(JSONObject jObj) {
 
@@ -158,9 +158,9 @@ public class LoginActivity extends Activity {
                 hideDialog();
                 String error = "";
 
-                try{
+                try {
                     error = jObj.getString("error");
-                }catch(Exception e){
+                } catch (Exception e) {
 
                 }
 

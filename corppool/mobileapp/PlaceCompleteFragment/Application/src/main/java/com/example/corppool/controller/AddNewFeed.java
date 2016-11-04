@@ -24,6 +24,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.corppool.controller.R;
+import com.example.corppool.db.SQLiteHandler;
 import com.example.corppool.model.Feed;
 import com.example.corppool.model.Location;
 import com.example.corppool.server.ServerInterface;
@@ -48,6 +49,8 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    public static final String TAG = "AddNewFeed";
 
     private TextView mPlaceDetailsText;
 
@@ -75,6 +78,7 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
 
     //instance of this view, this is to solve issue where back button on another fragment crashing app
     private static View view;
+    private SQLiteHandler db;
 
     public AddNewFeed() {
         // Required empty public constructor
@@ -101,6 +105,9 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // SQLite database handler
+        db = new SQLiteHandler(getActivity());
 
     }
 
@@ -218,11 +225,17 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         //Once Pojo serialisze is available, pass whole place object
         intent.putExtra("reqStartLoc",startLoc.getName());
         intent.putExtra("reqEndLoc",endLoc.getName());
-        intent.putExtra("reqStartLat",startLoc.getLatLng().latitude);
-        intent.putExtra("reqStartLong",startLoc.getLatLng().longitude);
+        intent.putExtra("reqStartLat", startLoc.getLatLng().latitude);
+        intent.putExtra("reqStartLong", startLoc.getLatLng().longitude);
         intent.putExtra("reqEndLat",endLoc.getLatLng().latitude);
         intent.putExtra("reqEndLong", endLoc.getLatLng().longitude);
 
+        //Since this is brand new request, clear old feeds
+        db.deleteFeeds();
+
+        //store in db
+        db.addFeed(startDate.getText().toString(),startDateVal.toString(),(timePicker.getHour()+":"+timePicker.getMinute()).toString(),startLoc.getName().toString(),endLoc.getName().toString()
+                ,String.valueOf(startLoc.getLatLng().latitude),String.valueOf( startLoc.getLatLng().longitude),String.valueOf(endLoc.getLatLng().latitude),String.valueOf(endLoc.getLatLng().longitude));
 
         startActivity(intent);
         getActivity().finish();
@@ -409,5 +422,6 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 
 }

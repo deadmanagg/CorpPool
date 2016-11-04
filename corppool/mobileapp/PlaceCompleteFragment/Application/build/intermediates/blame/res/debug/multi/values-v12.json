@@ -12,14 +12,14 @@
                     "endOffset": 274
                 },
                 "from": {
-                    "file": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\values-v12\\values-v12.xml",
+                    "file": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 281,
+                        "startOffset": 234,
                         "endLine": 6,
                         "endColumn": 12,
-                        "endOffset": 500
+                        "endOffset": 453
                     }
                 }
             },
@@ -33,14 +33,14 @@
                     "endOffset": 474
                 },
                 "from": {
-                    "file": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\values-v12\\values-v12.xml",
+                    "file": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 505,
+                        "startOffset": 458,
                         "endLine": 9,
                         "endColumn": 12,
-                        "endOffset": 700
+                        "endOffset": 653
                     }
                 }
             },
@@ -53,13 +53,13 @@
                     "endOffset": 593
                 },
                 "from": {
-                    "file": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\values-v12\\values-v12.xml",
+                    "file": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 705,
+                        "startOffset": 658,
                         "endColumn": 118,
-                        "endOffset": 819
+                        "endOffset": 772
                     }
                 }
             },
@@ -72,13 +72,13 @@
                     "endOffset": 688
                 },
                 "from": {
-                    "file": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\values-v12\\values-v12.xml",
+                    "file": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 824,
+                        "startOffset": 777,
                         "endColumn": 94,
-                        "endOffset": 914
+                        "endOffset": 867
                     }
                 }
             }
