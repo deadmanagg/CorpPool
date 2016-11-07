@@ -19,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -296,7 +298,6 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         // Retrieve the PlaceAutocompleteFragment.
         PlaceAutocompleteFragment startLoc = (PlaceAutocompleteFragment)
                 getChildFragmentManager().findFragmentById(R.id.startLoc);
-
 
 
         // Register a listener to receive callbacks when a place has been selected or an error has

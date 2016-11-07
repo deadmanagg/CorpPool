@@ -17,8 +17,10 @@
 package com.example.corppool.controller;
 
 import com.example.android.common.activities.SampleActivityBase;
+import com.example.corppool.db.SQLiteHandler;
 import com.example.corppool.model.Feed;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 
 import android.app.Fragment;
@@ -38,6 +40,9 @@ import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -45,6 +50,7 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.example.corppool.controller.R;
+import com.example.corppool.util.SessionUtil;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -73,7 +79,17 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+    private SessionUtil session;
 
+    private LoginButton loginButton;
+
+    //For clean up during logout
+    private SQLiteHandler db;
+
+    private  TabLayout tabLayout;
+
+    private static final int TAB_POS_NEW = 0;
+    private static final int TAB_POS_MYFEEDS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +101,7 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
 
         setContentView(R.layout.activity_main);
 
-        final Toolbar tool = (Toolbar)findViewById(R.id.tool_bar);
+        final Toolbar tool = (Toolbar) findViewById(R.id.tool_bar);
 
         setActionBar(tool);
 
@@ -109,6 +125,14 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+        //set session
+        // Session manager
+        session = new SessionUtil(getApplicationContext());
+
+
+        //invoke hide or show buttons for registration
+        showHideRegisterOptions();
     }
 
     /*private void addToolBar() {
@@ -146,9 +170,9 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
 
     private void addToolBar() {
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("New"));
-        tabLayout.addTab(tabLayout.newTab().setText("Requested"));
+        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("New"),TAB_POS_NEW);
+        tabLayout.addTab(tabLayout.newTab().setText("My Feeds"),TAB_POS_MYFEEDS);
 
         //tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
@@ -174,8 +198,8 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         showFragment(0);
     }
 
-    private void showFragment(int pos){
-        switch(pos){
+    private void showFragment(int pos) {
+        switch (pos) {
             case 0:
                 showAddNewFeed();
                 break;
@@ -199,7 +223,7 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         Fragment fragment = new Feeds_results();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.container, fragment); // fragment container id in first parameter is the  container(Main layout id) of Activity
-        transaction.addToBackStack("newfeed");  // this will manage backstack
+        transaction.addToBackStack("feedresults");  // this will manage backstack
         transaction.commit();
     }
 
@@ -222,7 +246,7 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
     public void linkFacebookButton() {
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
-        LoginButton loginButton = (LoginButton) findViewById(R.id.fb_login_button);
+        loginButton = (LoginButton) findViewById(R.id.fb_login_button);
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -245,7 +269,12 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
 
     //Call back method once confirm feed is successful
     public void CallBackConfirmFeedSuccess(Feed feed) {
-        dialogForNotLoggedInUser();
+
+        if (!session.isLoggedIn()) {
+            dialogForNotLoggedInUser();
+        } else {
+            dialogForLoggedInUser();
+        }
 
     }
 
@@ -269,6 +298,28 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
 
         //now back to the original feed
         showAddNewFeed();
+    }
+
+    //show dialog for first timers
+    public void dialogForLoggedInUser() {
+
+        //TODO check if user logged in
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.title_route_submit));
+        builder.setMessage(getString(R.string.confirm_feed_msg_logged_in))
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //do things
+
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+
+        //now back to the original feed
+        tabLayout.getTabAt(TAB_POS_MYFEEDS).select();
     }
 
     @Override
@@ -295,7 +346,7 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         Context mContext;
         LayoutInflater mLayoutInflater;
 
-        public MyPagerAdapter(FragmentManager fragmentManager,Context ctx) {
+        public MyPagerAdapter(FragmentManager fragmentManager, Context ctx) {
             super(fragmentManager);
             //  mFragmentManager = fragmentManager;
             // mFragmentTags = new HashMap<Integer, String>();
@@ -335,6 +386,7 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         public int getItemPosition(Object object) {
             return POSITION_NONE;
         }
+
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             Object object = super.instantiateItem(container, position);
@@ -358,5 +410,89 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         }
 
     }
+
+    private static final int MENU_MYACCOUNT = Menu.FIRST;
+    private static final int MENU_LOGOUT = Menu.FIRST + 1;
+    //add menu to the activity. This will be called only when user is logged in
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        // Check if user is already logged in or not
+        if (!session.isLoggedIn()) {
+            return true;
+        }
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mainmenu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public void showHideRegisterOptions() {
+
+        if (session.isLoggedIn()) {
+
+            btnRegister.setVisibility(View.INVISIBLE);
+            loginButton.setVisibility(View.INVISIBLE);
+        } else {
+            btnRegister.setVisibility(View.VISIBLE);
+            loginButton.setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.logout:
+                confirmLogout();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void cleanUpAndLogout() {
+
+        db = new SQLiteHandler(this);
+
+        //clear feeds
+        db.deleteFeeds();
+
+        //clear db user
+        db.deleteUsers();
+
+        //now logout
+        session.setLogin(false);
+
+        //Clean up server data TODO
+
+        //restart activity
+        recreate();
+    }
+
+    public void confirmLogout() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.title_logout));
+        builder.setMessage(getString(R.string.confirm_msg_logout))
+                .setNegativeButton("Stay logged in", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //do nothing, just return
+
+                    }
+                }).
+
+                setPositiveButton("Yes, Log out", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                //logout user
+                                cleanUpAndLogout();
+                            }
+                        }
+
+                );
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 }
 

@@ -51,6 +51,7 @@
     <string name="btn_logout">LOGOUT</string>
     <string name="name">Fullname</string>
 
+
     <!-- Facebook app id for fb login -->
     <string name="facebook_app_id">115702192234433</string>
 </resources>

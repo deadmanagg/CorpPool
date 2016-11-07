@@ -194,6 +194,12 @@ public class Feeds_results extends Fragment {
     private void loadDataFromDb(){
 
       HashMap<String,String> map = db.getFeedDetails();
+
+        //return if map is empty
+        if(map.isEmpty()){
+            return;
+        }
+
         //populate pojo and use that to populate futher
         reqStartFeed.setStartAddress(map.get("reqStartLoc"));
         reqStartFeed.setEndAddress(map.get("reqEndLoc"));

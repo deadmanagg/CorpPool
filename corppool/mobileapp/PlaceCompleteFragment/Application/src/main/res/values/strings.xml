@@ -35,6 +35,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="confirm_feed_msg_not_logged_in">We\'ll notify you once someone sends request. To see all requests and other features kindly register</string>
+    <string name="confirm_feed_msg_logged_in">We\'ll notify you once someone sends request. You can check My Feeds tab for the updates.</string>
+    <string name="confirm_msg_logout">All your submissions will be lost. Users who has opted your submission will get cancel notifications. </string>
+
+    <string name="title_logout">Are you sure you want to logout? </string>
+
     <string name="title_route_submit">Route Submitted</string>
     <string name="msg_exit_on_back">Press back button again to exit the application</string>
     <string name="title_activity_login">Sign in</string>

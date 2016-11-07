@@ -442,7 +442,9 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="confirm_feed_msg_logged_in">We\'ll notify you once someone sends request. You can check My Feeds tab for the updates.</string>
     <string name="confirm_feed_msg_not_logged_in">We\'ll notify you once someone sends request. To see all requests and other features kindly register</string>
+    <string name="confirm_msg_logout">All your submissions will be lost. Users who has opted your submission will get cancel notifications. </string>
     <string name="confirmfeed">CONFIRM</string>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
@@ -515,6 +517,7 @@
     <string name="store_picture_title">Save image</string>
     <string name="title_activity_feeds_main">Available Options</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="title_logout">Are you sure you want to logout? </string>
     <string name="title_route_submit">Route Submitted</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
     <string name="welcome">Welcome</string>

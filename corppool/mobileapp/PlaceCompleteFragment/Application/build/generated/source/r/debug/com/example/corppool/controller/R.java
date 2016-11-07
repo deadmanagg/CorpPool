@@ -3191,6 +3191,7 @@ containing a value of this type.
         public static final int listMode=0x7f0d000c;
         public static final int list_item=0x7f0d0070;
         public static final int logo_only=0x7f0d0056;
+        public static final int logout=0x7f0d00ee;
         public static final int match_parent=0x7f0d004f;
         public static final int media_actions=0x7f0d00da;
         public static final int media_route_control_frame=0x7f0d00cd;
@@ -3204,6 +3205,7 @@ containing a value of this type.
         public static final int minutesAway=0x7f0d00c6;
         public static final int monochrome=0x7f0d005f;
         public static final int multiply=0x7f0d0027;
+        public static final int myaccount=0x7f0d00ed;
         public static final int name=0x7f0d00a7;
         public static final int navigation_header_container=0x7f0d00b4;
         public static final int never=0x7f0d003c;
@@ -3277,7 +3279,7 @@ containing a value of this type.
         public static final int standard=0x7f0d003f;
         public static final int start=0x7f0d0025;
         public static final int startAddress=0x7f0d00c4;
-        public static final int startDate=0x7f0d00bc;
+        public static final int startDate=0x7f0d00bb;
         public static final int startLoc=0x7f0d00b9;
         public static final int status_bar_latest_event_content=0x7f0d00d9;
         public static final int stop=0x7f0d00d6;
@@ -3292,7 +3294,7 @@ containing a value of this type.
         public static final int text2=0x7f0d00df;
         public static final int textSpacerNoButtons=0x7f0d007c;
         public static final int time=0x7f0d00dd;
-        public static final int timePicker1=0x7f0d00bb;
+        public static final int timePicker1=0x7f0d00bc;
         public static final int title=0x7f0d0072;
         public static final int title_bar=0x7f0d00ca;
         public static final int title_template=0x7f0d0077;
@@ -3396,6 +3398,9 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f04004a;
         public static final int tool_bar=0x7f04004b;
     }
+    public static final class menu {
+        public static final int mainmenu=0x7f0e0000;
+    }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
     }
@@ -3483,30 +3488,32 @@ containing a value of this type.
         public static final int common_open_on_phone=0x7f07002d;
         public static final int common_signin_button_text=0x7f07002e;
         public static final int common_signin_button_text_long=0x7f07002f;
-        public static final int confirm_feed_msg_not_logged_in=0x7f070060;
-        public static final int confirmfeed=0x7f070061;
-        public static final int create_calendar_message=0x7f070062;
-        public static final int create_calendar_title=0x7f070063;
-        public static final int decline=0x7f070064;
-        public static final int defaultDay=0x7f070065;
-        public static final int driver=0x7f070066;
-        public static final int emailLabel=0x7f070067;
-        public static final int error_field_required=0x7f070068;
-        public static final int error_incorrect_password=0x7f070069;
-        public static final int error_invalid_email=0x7f07006a;
-        public static final int error_invalid_password=0x7f07006b;
-        public static final int facebook_app_id=0x7f07006c;
-        public static final int hello_blank_fragment=0x7f07006d;
-        public static final int hint_email=0x7f07006e;
-        public static final int hint_name=0x7f07006f;
-        public static final int hint_password=0x7f070070;
-        public static final int intro_message=0x7f070071;
-        public static final int lbl_endloc=0x7f070072;
-        public static final int lbl_startloc=0x7f070073;
+        public static final int confirm_feed_msg_logged_in=0x7f070060;
+        public static final int confirm_feed_msg_not_logged_in=0x7f070061;
+        public static final int confirm_msg_logout=0x7f070062;
+        public static final int confirmfeed=0x7f070063;
+        public static final int create_calendar_message=0x7f070064;
+        public static final int create_calendar_title=0x7f070065;
+        public static final int decline=0x7f070066;
+        public static final int defaultDay=0x7f070067;
+        public static final int driver=0x7f070068;
+        public static final int emailLabel=0x7f070069;
+        public static final int error_field_required=0x7f07006a;
+        public static final int error_incorrect_password=0x7f07006b;
+        public static final int error_invalid_email=0x7f07006c;
+        public static final int error_invalid_password=0x7f07006d;
+        public static final int facebook_app_id=0x7f07006e;
+        public static final int hello_blank_fragment=0x7f07006f;
+        public static final int hint_email=0x7f070070;
+        public static final int hint_name=0x7f070071;
+        public static final int hint_password=0x7f070072;
+        public static final int intro_message=0x7f070073;
+        public static final int lbl_endloc=0x7f070074;
+        public static final int lbl_startloc=0x7f070075;
         public static final int messenger_send_button_text=0x7f070030;
-        public static final int milesAwayText=0x7f070074;
-        public static final int minutesAwayTxt=0x7f070075;
-        public static final int mobileLabel=0x7f070076;
+        public static final int milesAwayText=0x7f070076;
+        public static final int minutesAwayTxt=0x7f070077;
+        public static final int mobileLabel=0x7f070078;
         public static final int mr_media_route_button_content_description=0x7f070031;
         public static final int mr_media_route_chooser_searching=0x7f070032;
         public static final int mr_media_route_chooser_title=0x7f070033;
@@ -3518,27 +3525,28 @@ containing a value of this type.
         public static final int mr_media_route_controller_stop=0x7f070039;
         public static final int mr_system_route_name=0x7f07003a;
         public static final int mr_user_route_category_name=0x7f07003b;
-        public static final int msg_exit_on_back=0x7f070077;
-        public static final int name=0x7f070078;
-        public static final int permission_rationale=0x7f070079;
+        public static final int msg_exit_on_back=0x7f070079;
+        public static final int name=0x7f07007a;
+        public static final int permission_rationale=0x7f07007b;
         public static final int place_autocomplete_clear_button=0x7f07003c;
         public static final int place_autocomplete_search_hint=0x7f07003d;
-        public static final int place_details=0x7f07007a;
-        public static final int prompt_email=0x7f07007b;
-        public static final int prompt_password=0x7f07007c;
-        public static final int reg_title=0x7f07007d;
-        public static final int rider=0x7f07007e;
-        public static final int selected_place=0x7f07007f;
-        public static final int sendText=0x7f070080;
-        public static final int showdetails=0x7f070081;
+        public static final int place_details=0x7f07007c;
+        public static final int prompt_email=0x7f07007d;
+        public static final int prompt_password=0x7f07007e;
+        public static final int reg_title=0x7f07007f;
+        public static final int rider=0x7f070080;
+        public static final int selected_place=0x7f070081;
+        public static final int sendText=0x7f070082;
+        public static final int showdetails=0x7f070083;
         public static final int status_bar_notification_info_overflow=0x7f07003e;
-        public static final int store_picture_message=0x7f070082;
-        public static final int store_picture_title=0x7f070083;
-        public static final int title_activity_feeds_main=0x7f070084;
-        public static final int title_activity_login=0x7f070085;
-        public static final int title_route_submit=0x7f070086;
+        public static final int store_picture_message=0x7f070084;
+        public static final int store_picture_title=0x7f070085;
+        public static final int title_activity_feeds_main=0x7f070086;
+        public static final int title_activity_login=0x7f070087;
+        public static final int title_logout=0x7f070088;
+        public static final int title_route_submit=0x7f070089;
         public static final int wallet_buy_button_place_holder=0x7f07003f;
-        public static final int welcome=0x7f070087;
+        public static final int welcome=0x7f07008a;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0a0081;
