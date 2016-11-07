@@ -8,8 +8,8 @@ import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
 
 public class ConfigurationJdbc {
 
-	private static final String DBURL = "jdbc:mysql://localhost/corppool_db?user=root&password=root";
-	//private static final String DBURL = "jdbc:mysql://127.9.110.2:3306/kplok_dev_db?user=adminkd6ihE7&password=beXcWRAMHEM1";
+	//private static final String DBURL = "jdbc:mysql://localhost/corppool_db?user=root&password=root";
+	private static final String DBURL = "jdbc:mysql://127.9.110.2:3306/corppool_db?user=adminkd6ihE7&password=beXcWRAMHEM1";
 	public static BasicDataSource connectionPool;
 	
 	// Get connection from db pool

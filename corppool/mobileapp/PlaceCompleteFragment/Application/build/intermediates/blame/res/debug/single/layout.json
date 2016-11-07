@@ -80,6 +80,10 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_my_feeds.xml",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\src\\main\\res\\layout\\fragment_my_feeds.xml"
+    },
+    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_part_chronometer.xml"
     },
@@ -92,12 +96,12 @@
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_lines.xml"
     },
     {
-        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
-        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.0.0\\res\\layout\\messenger_button_send_blue_large.xml"
-    },
-    {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
+        "source": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.0.0\\res\\layout\\messenger_button_send_blue_large.xml"
     },
     {
         "merged": "E:\\CODES\\CorpPool\\CorpPool\\corppool\\mobileapp\\PlaceCompleteFragment\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",

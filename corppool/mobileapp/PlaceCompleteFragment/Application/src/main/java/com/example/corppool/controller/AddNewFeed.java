@@ -204,14 +204,30 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
             case R.id.find_button:
                 // do your code
                 intent = "FIND";
-                //invoke the other activity
-                showFeeds();
+                addFeedInDb();
+
+                //if logged in, invoke parent method
+                if(((MainActivity)getActivity()).isLoggedIn()){
+                    ((MainActivity)getActivity()).showTabMyFeeds();
+                }
+                else {//invoke the other activity
+                    showFeeds();
+                }
                 break;
             default:
                 break;
         }
     }
 
+    private void addFeedInDb(){
+        //Since this is brand new request, clear old feeds
+        db.deleteFeeds();
+
+        //store in db
+        db.addFeed(startDate.getText().toString(),startDateVal.toString(),(timePicker.getHour()+":"+timePicker.getMinute()).toString(),startLoc.getName().toString(),endLoc.getName().toString()
+                ,String.valueOf(startLoc.getLatLng().latitude),String.valueOf( startLoc.getLatLng().longitude),String.valueOf(endLoc.getLatLng().latitude),String.valueOf(endLoc.getLatLng().longitude));
+
+    }
     private void showFeeds(){
 
         Intent intent = new Intent( getActivity(), Feeds_main.class);
@@ -231,14 +247,6 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         intent.putExtra("reqStartLong", startLoc.getLatLng().longitude);
         intent.putExtra("reqEndLat",endLoc.getLatLng().latitude);
         intent.putExtra("reqEndLong", endLoc.getLatLng().longitude);
-
-        //Since this is brand new request, clear old feeds
-        db.deleteFeeds();
-
-        //store in db
-        db.addFeed(startDate.getText().toString(),startDateVal.toString(),(timePicker.getHour()+":"+timePicker.getMinute()).toString(),startLoc.getName().toString(),endLoc.getName().toString()
-                ,String.valueOf(startLoc.getLatLng().latitude),String.valueOf( startLoc.getLatLng().longitude),String.valueOf(endLoc.getLatLng().latitude),String.valueOf(endLoc.getLatLng().longitude));
-
         startActivity(intent);
         getActivity().finish();
     }

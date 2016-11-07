@@ -30,8 +30,9 @@ public class AppUsersDAOImpl implements AppUsersDAO {
 	public void addNewUser(AppUsers user) {
 
 		// TODO use spring jdbc for further operations
+		Connection conn = null;
 		try {
-			Connection conn = ConfigurationJdbc.getPoolConnection().getConnection();
+			conn = ConfigurationJdbc.getPoolConnection().getConnection();
 
 			String insetFeed = "Insert into appusers (userid,password,usertype) values(?,?,?) ";
 
@@ -41,13 +42,29 @@ public class AppUsersDAOImpl implements AppUsersDAO {
 			stmt.setString(3, user.getUsertype());
 			
 			stmt.executeUpdate();
-
+			
 			stmt.close();
+			
+			conn.commit();
 			conn.close();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			e.printStackTrace();
+		}finally{
+			if(conn!=null){
+				try{
+				conn.close();
+				}catch(Exception e){
+					
+				}
+			}
 		}
 
 	}
@@ -55,8 +72,9 @@ public class AppUsersDAOImpl implements AppUsersDAO {
 	@Override
 	public AppUsers getUserByEmail(String email) {
 		AppUsers user = new AppUsers();
+		Connection conn = null;
 		try {
-			Connection conn = ConfigurationJdbc.getPoolConnection().getConnection();
+			conn = ConfigurationJdbc.getPoolConnection().getConnection();
 
 			String getFeed = "select * from appusers where userid = ? ";
 
@@ -70,11 +88,27 @@ public class AppUsersDAOImpl implements AppUsersDAO {
 			}
 			
 			stmt.close();
+			
+			conn.commit();
 			conn.close();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			e.printStackTrace();
+		}finally{
+			if(conn!=null){
+				try{
+				conn.close();
+				}catch(Exception e){
+					
+				}
+			}
 		}
 		return user;
 	}

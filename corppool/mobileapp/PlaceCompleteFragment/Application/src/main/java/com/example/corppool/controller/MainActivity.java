@@ -67,7 +67,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends SampleActivityBase implements Feeds_results.OnFragmentInteractionListener, ConfirmFeedSubmit.OnFragmentInteractionListener, AddNewFeed.OnFragmentInteractionListener {
+public class MainActivity extends SampleActivityBase implements MyFeeds.OnFragmentInteractionListener, Feeds_results.OnFragmentInteractionListener, ConfirmFeedSubmit.OnFragmentInteractionListener, AddNewFeed.OnFragmentInteractionListener {
 
     public static String currentView = "";
     CallbackManager callbackManager;
@@ -90,6 +90,7 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
 
     private static final int TAB_POS_NEW = 0;
     private static final int TAB_POS_MYFEEDS = 1;
+   // private static final int TAB_POS_MYFEEDS_TEMP = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,6 +174,7 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("New"),TAB_POS_NEW);
         tabLayout.addTab(tabLayout.newTab().setText("My Feeds"),TAB_POS_MYFEEDS);
+       // tabLayout.addTab(tabLayout.newTab().setText("My Temp"),TAB_POS_MYFEEDS_TEMP);
 
         //tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
@@ -204,7 +206,11 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
                 showAddNewFeed();
                 break;
             case 1:
-                showFeedresults();
+                //showFeedresults();
+                showMyFeeds();
+                break;
+            case 2:
+
                 break;
         }
     }
@@ -224,6 +230,15 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.container, fragment); // fragment container id in first parameter is the  container(Main layout id) of Activity
         transaction.addToBackStack("feedresults");  // this will manage backstack
+        transaction.commit();
+    }
+
+    //function to show results TODO it will not work since no data passed
+    private void showMyFeeds(){
+        Fragment fragment = new MyFeeds();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment); // fragment container id in first parameter is the  container(Main layout id) of Activity
+        transaction.addToBackStack("feedresultsTemp");  // this will manage backstack
         transaction.commit();
     }
 
@@ -318,8 +333,7 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         AlertDialog alert = builder.create();
         alert.show();
 
-        //now back to the original feed
-        tabLayout.getTabAt(TAB_POS_MYFEEDS).select();
+        showTabMyFeeds();
     }
 
     @Override
@@ -494,5 +508,18 @@ public class MainActivity extends SampleActivityBase implements Feeds_results.On
         alert.show();
     }
 
+    public void showTabMyFeeds(){
+        //now back to the original feed
+        tabLayout.getTabAt(TAB_POS_MYFEEDS).select();
+    }
+
+    public void showTabNew(){
+        //now back to the original feed
+        tabLayout.getTabAt(TAB_POS_NEW).select();
+    }
+
+    public boolean isLoggedIn(){
+        return session.isLoggedIn();
+    }
 }
 
