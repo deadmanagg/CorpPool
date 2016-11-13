@@ -14,7 +14,12 @@ package com.example.corppool.db;
         import android.database.sqlite.SQLiteOpenHelper;
         import android.util.Log;
 
+        import com.example.corppool.model.Feed;
+
         import java.util.HashMap;
+        import java.util.Iterator;
+        import java.util.List;
+        import java.util.Map;
 
 public class SQLiteHandler extends SQLiteOpenHelper {
 
@@ -22,10 +27,13 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 
     // All Static variables
     // Database Version
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 7;
 
     // Database Name
     private static final String DATABASE_NAME = "android_cp_api";
+
+    //this object
+    private static SQLiteHandler instance;
 
     // Login table name
     private static final String TABLE_USER = "user";
@@ -52,9 +60,44 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     private static final String COL_FEED_reqStartLong = "reqStartLong";
     private static final String COL_FEED_reqEndLat = "reqEndLat";
     private static final String COL_FEED_reqEndLong = "reqEndLong";
+    private static final Map<String,List<String>> schemaStructure = new HashMap<String,List<String>>();
+    static {
+
+        //add accepted handlers here
+        schemaStructure.putAll(FeedDbHandler.getSchemaDefination());
+
+
+
+    }
 
     public SQLiteHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+
+
+    //supported classes
+    public enum DBOjects {
+        FEED,
+        USER
+    }
+
+    //second parameter is just to enforce that dbhandler has functions to call on create or update tables;
+    public static SQLiteHandler getInstance(Context context,DbHandler object)
+    throws  Exception{
+
+        if(!isValidHandler(object))
+            throw new Exception(" Invalid Db Handler. Add into SQLiteHandler static class ");
+        if(instance==null){
+            instance = new SQLiteHandler(context);
+        }
+        return instance;
+    }
+
+    private static boolean isValidHandler(DbHandler object){
+        if(!schemaStructure.containsKey(object.getTableName())){
+            return false;
+        }
+        return true;
     }
 
     // Creating Tables
@@ -66,19 +109,58 @@ public class SQLiteHandler extends SQLiteOpenHelper {
                 + KEY_CREATED_AT + " TEXT" + ")";
         db.execSQL(CREATE_LOGIN_TABLE);
 
-        //create feed table now
+        /*//create feed table now
         CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_FEED + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + COL_FEED_date_display + " TEXT,"
                 + COL_FEED_date + " TEXT UNIQUE," + COL_FEED_time + " TEXT,"
                 + COL_FEED_reqStartLoc + " TEXT ," + COL_FEED_reqEndLoc + " TEXT,"
                 + COL_FEED_reqStartLat + " TEXT ," + COL_FEED_reqStartLong + " TEXT,"
                 + COL_FEED_reqEndLat + " TEXT ,"+ COL_FEED_reqEndLong + " TEXT" + ")";
-        db.execSQL(CREATE_LOGIN_TABLE);
-
+        db.execSQL(CREATE_LOGIN_TABLE);*/
+        createTables(db);
 
         Log.d(TAG, "Database tables created");
     }
 
+
+    private void createTables(SQLiteDatabase db){
+        //run throught the list of db handlers and create table
+        for(Map.Entry<String,List<String>> entry: schemaStructure.entrySet()){
+
+            String createTable = "Create table "+entry.getKey()+"(";
+
+            boolean isFirst = true;
+            //add column description
+            List<String> columns = entry.getValue();
+            for(String col: columns){
+
+                //add comma in the beginning
+                if(isFirst){
+                    isFirst=false;
+                }else{
+                    createTable+=",";
+                }
+
+                createTable+=col;
+            }
+
+            createTable+=")";
+
+            db.execSQL(createTable);
+        }
+
+    }
+
+    private void dropTables(SQLiteDatabase db){
+        //run throught the list of db handlers and create table
+        for(Map.Entry<String,List<String>> entry: schemaStructure.entrySet()){
+
+            String dropTable = "drop table if exists "+entry.getKey();
+
+            db.execSQL(dropTable);
+        }
+
+    }
     // Upgrading database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -86,6 +168,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_FEED);
 
+        dropTables(db);
         // Create tables again
         onCreate(db);
     }
@@ -219,6 +302,11 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         db.close();
 
         Log.d(TAG, "Deleted all feeds info from sqlite");
+    }
+
+    public SQLiteDatabase getDatabase(){
+
+        return getWritableDatabase();
     }
 
 }

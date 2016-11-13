@@ -9,17 +9,21 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.corppool.android.custom.adapter.FeedListAdapter;
+import com.example.corppool.db.FeedDbHandler;
 import com.example.corppool.db.SQLiteHandler;
 import com.example.corppool.model.Feed;
 import com.example.corppool.model.Location;
 import com.example.corppool.server.ServerInterface;
+import com.example.corppool.util.CommonUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,6 +48,8 @@ public class Feeds_results extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    public static final String TAG = "FeedResults";
+
     private TextView reqStartLoc;
     private TextView reqEndLoc;
 
@@ -56,7 +62,7 @@ public class Feeds_results extends Fragment {
     private List<Feed> feeds = new ArrayList<Feed>();
     private FeedListAdapter adapter;
 
-    private SQLiteHandler db;
+    private FeedDbHandler db;
     private OnFragmentInteractionListener mListener;
 
     public Feeds_results() {
@@ -85,7 +91,12 @@ public class Feeds_results extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // SQLite database handler
-        db = new SQLiteHandler(getActivity());
+        // SQLite database handler
+        try {
+            db = new FeedDbHandler(getActivity());
+        }catch(Exception e){
+            Log.d(TAG, "onCreate: unable to create db object " + e);
+        }
     }
 
     @Override
@@ -193,14 +204,12 @@ public class Feeds_results extends Fragment {
 
     private void loadDataFromDb(){
 
-      HashMap<String,String> map = db.getFeedDetails();
+        //TODO do more gracefully
+       reqStartFeed = db.getFeedDetails(Feed.AvailableTypes.RIDER).iterator().next();
 
-        //return if map is empty
-        if(map.isEmpty()){
-            return;
-        }
 
-        //populate pojo and use that to populate futher
+
+        /*//populate pojo and use that to populate futher
         reqStartFeed.setStartAddress(map.get("reqStartLoc"));
         reqStartFeed.setEndAddress(map.get("reqEndLoc"));
         reqStartFeed.setDate(map.get("date"));
@@ -218,6 +227,7 @@ public class Feeds_results extends Fragment {
         eloc.setType("Point");
         eloc.set_lat(Double.valueOf(map.get("reqEndLat")));
         eloc.set_long(Double.valueOf(map.get("reqEndLong")));
+        */
 
         //populate values from the request
         reqStartLoc.setText(reqStartFeed.getStartAddress());
@@ -225,9 +235,9 @@ public class Feeds_results extends Fragment {
 
         //reqStartDate.setText(reqStartFeed.getDate());
         //display date
-        reqStartDate.setText(map.get("date_display"));
+        reqStartDate.setText(CommonUtils.getDateAsString(reqStartFeed.getDatetime(),true));
 
-        reqStartTime.setText(reqStartFeed.getTime());
+        reqStartTime.setText(CommonUtils.getTimeAsString(reqStartFeed.getDatetime()));
 
 
     }
@@ -245,6 +255,16 @@ public class Feeds_results extends Fragment {
 
         new GetFeeds().execute();
         feedList =(ListView) getActivity().findViewById(android.R.id.list);
+
+        feedList.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+                return false;
+            }
+        });
+
         adapter= new FeedListAdapter(getActivity(),
                 feeds,reqStartFeed);
 

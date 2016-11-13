@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,6 +21,7 @@ public class Feed implements JSONSerializable {
     private String city;
     private String date;
     private String time;
+    private Date datetime;
 
     private Location startLoc;
     private Location endLoc;
@@ -32,6 +34,34 @@ public class Feed implements JSONSerializable {
 
     private User driver;
     private List<User> rider;
+
+    public enum AvailableTypes{
+        RIDER("rider"),
+        CAROWNER("owner"),
+        UNKNOWN("unknown");
+
+        private String text;
+
+        AvailableTypes(String text) {
+            this.text = text;
+        }
+
+        public String getText() {
+            return this.text;
+        }
+
+
+        public static AvailableTypes fromString(String text) {
+            if (text != null) {
+                for (AvailableTypes b : AvailableTypes.values()) {
+                    if (text.equalsIgnoreCase(b.text)) {
+                        return b;
+                    }
+                }
+            }
+            return UNKNOWN;
+        }
+    }
 
     //below constructor will be used to display feed.
     //this constructor is not useful to send info to server
@@ -69,6 +99,15 @@ public class Feed implements JSONSerializable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public void setType(AvailableTypes type) {
+        this.type = type.getText();
+    }
+
+    public AvailableTypes getTypeEnum() {
+
+        return AvailableTypes.fromString(this.type);
     }
 
     public String getCity() {
@@ -173,6 +212,14 @@ public class Feed implements JSONSerializable {
         this.xMinutesAway = xMinutesAway;
     }
 
+    public Date getDatetime() {
+        return datetime;
+    }
+
+    public void setDatetime(Date datetime) {
+        this.datetime = datetime;
+    }
+
     //TODO move this to util, using Locker Project utlity funciton to convert JSOn to class object
     public static Feed marshalToFeed(JSONObject json) throws  JSONException{
         Feed feed = new Feed();
@@ -209,6 +256,8 @@ public class Feed implements JSONSerializable {
         o.put("time",time);
         o.put("date",date);
 
+        o.put("datetime",datetime.getTime());
+
         return  o;
 
     }
@@ -228,4 +277,6 @@ public class Feed implements JSONSerializable {
     public void setRider(List<User> rider) {
         this.rider = rider;
     }
+
+
 }

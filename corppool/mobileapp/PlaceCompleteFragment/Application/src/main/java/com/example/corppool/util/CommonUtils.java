@@ -1,13 +1,18 @@
 package com.example.corppool.util;
 
 import android.location.Location;
+import android.text.format.DateUtils;
+import android.util.Log;
 
 import com.example.corppool.model.TimeDifference;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Formatter;
 import java.util.InvalidPropertiesFormatException;
 
 /**
@@ -15,6 +20,7 @@ import java.util.InvalidPropertiesFormatException;
  */
 public class CommonUtils {
 
+    public static final String TAG = "CommonUtils";
     //catch exception and return blank string
     public static String getJsonValue(JSONObject obj,String key){
 
@@ -108,5 +114,39 @@ public class CommonUtils {
             finalDate = datesObj[2] + "-" + datesObj[1] + "-" + datesObj[0];
         }
         return finalDate;
+    }
+
+    public static String getDateAsString(Date datetime,boolean userFriendly){
+
+        String date = "";
+        try{
+            SimpleDateFormat dt1 = new SimpleDateFormat("dd/MM/yyyy");
+            date = dt1.format(datetime);
+
+            if(userFriendly){
+                if(DateUtils.isToday(datetime.getTime())){
+                    date = "Today";
+                }
+            }
+
+        }catch(Exception e){
+            Log.e(TAG, "getDateAsString: ",e );
+        }
+
+        return date;
+    }
+
+    public static  String getTimeAsString(Date datetime) {
+
+        String time = "";
+        try {
+
+            SimpleDateFormat dt1 = new SimpleDateFormat("HH:mm");
+            time = dt1.format(datetime);
+
+        } catch (Exception e) {
+
+        }
+        return time;
     }
 }

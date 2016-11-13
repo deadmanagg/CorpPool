@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.corppool.controller.R;
+import com.example.corppool.db.FeedDbHandler;
 import com.example.corppool.db.SQLiteHandler;
 import com.example.corppool.model.Feed;
 import com.example.corppool.model.Location;
@@ -36,6 +38,7 @@ import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 
 import java.util.Calendar;
+import java.util.Date;
 
 
 /**
@@ -64,8 +67,6 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
     private Feed feed = new Feed();
     private Button postButton;
 
-    private String intent;
-
     private Place startLoc;
     private Place endLoc;
     private Button findButton;
@@ -80,7 +81,7 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
 
     //instance of this view, this is to solve issue where back button on another fragment crashing app
     private static View view;
-    private SQLiteHandler db;
+    private FeedDbHandler db;
 
     public AddNewFeed() {
         // Required empty public constructor
@@ -109,7 +110,11 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         super.onCreate(savedInstanceState);
 
         // SQLite database handler
-        db = new SQLiteHandler(getActivity());
+        try {
+            db = new FeedDbHandler(getActivity());
+        }catch(Exception e){
+            Log.d(TAG, "onCreate: unable to create db object "+e);
+        }
 
     }
 
@@ -192,7 +197,7 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
 
             case R.id.post_button:
                 // do your code
-                intent = "POST";
+                feed.setType(Feed.AvailableTypes.CAROWNER);
 
                 //postfeed has been moved to confirm feed
                 //new PostFeed().execute();
@@ -203,7 +208,7 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
 
             case R.id.find_button:
                 // do your code
-                intent = "FIND";
+                feed.setType(Feed.AvailableTypes.RIDER);
                 addFeedInDb();
 
                 //if logged in, invoke parent method
@@ -224,9 +229,7 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         db.deleteFeeds();
 
         //store in db
-        db.addFeed(startDate.getText().toString(),startDateVal.toString(),(timePicker.getHour()+":"+timePicker.getMinute()).toString(),startLoc.getName().toString(),endLoc.getName().toString()
-                ,String.valueOf(startLoc.getLatLng().latitude),String.valueOf( startLoc.getLatLng().longitude),String.valueOf(endLoc.getLatLng().latitude),String.valueOf(endLoc.getLatLng().longitude));
-
+       db.addFeed(feed);
     }
     private void showFeeds(){
 
@@ -357,8 +360,9 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
         startDateVal = ""+mDay+"/"+(mMonth+1)+"/"+mYear;
 
         feed.setDate(startDateVal);
-        feed.setTime(timePicker.getHour()+":"+timePicker.getMinute());
+        feed.setTime(timePicker.getHour() + ":" + timePicker.getMinute());
 
+        feed.setDatetime(mcurrentDate.getTime());
         //set listener to show dialog for date
         startDate.setOnClickListener(new View.OnClickListener() {
 
@@ -366,7 +370,7 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 //To show current date in the datepicker
-                Calendar mcurrentDate = Calendar.getInstance();
+                final Calendar mcurrentDate = Calendar.getInstance();
                 int mYear = mcurrentDate.get(Calendar.YEAR);
                 int mMonth = mcurrentDate.get(Calendar.MONTH);
                 int mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
@@ -388,6 +392,30 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
 
                         //set feed variable
                         feed.setDate(startDateVal);
+
+                        //get the datetime current set on feed
+                        Date setFeedDate = feed.getDatetime();
+
+                        //TODO check if null, then it is never set, set instantly
+                        //relying on onactivity which should have already been created
+                        Calendar setFeedDateObj = Calendar.getInstance();
+
+                        //setting only dd mm yy factors
+                        if(setFeedDate!=null){
+
+                            setFeedDateObj.setTimeInMillis(setFeedDate.getTime());
+                            //now set date time based on the selected
+                         }else{
+
+                            //set new calendar object
+                            feed.setDatetime(setFeedDateObj.getTime());
+                        }
+
+                        //now set dates details
+                        setFeedDateObj.set(selectedyear, selectedmonth, selectedday);
+
+                        //now set this back to feed
+                        feed.setDatetime(setFeedDateObj.getTime());
                     }
                 }
 
@@ -406,6 +434,30 @@ public class AddNewFeed extends Fragment implements PlaceSelectionListener,View.
 
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
                 feed.setTime(hourOfDay+":"+minute);
+
+                //get the datetime current set on feed
+                Date setFeedDate = feed.getDatetime();
+
+                //TODO check if null, then it is never set, set instantly
+                //relying on onactivity which should have already been created
+                Calendar setFeedTimeObj = Calendar.getInstance();
+
+                //setting only dd mm yy factors
+                if(setFeedDate!=null){
+
+                    setFeedTimeObj.setTimeInMillis(setFeedDate.getTime());
+                    //now set date time based on the selected
+                }else{
+
+                    //set new calendar object
+                    feed.setDatetime(setFeedTimeObj.getTime());
+                }
+
+                //now set time
+                setFeedTimeObj.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                setFeedTimeObj.set(Calendar.MINUTE,minute);
+
+                feed.setDatetime(setFeedTimeObj.getTime());
             }
         });
 
